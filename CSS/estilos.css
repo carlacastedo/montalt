@@ -11,24 +11,29 @@ body{
     margin: 0px;
 }
 
-.imgconfoto{
+header{
     position: relative;
     padding: 0px;
     margin: 0px;
 }
 
-#imgcabecera{
+header>figure>img{
     width: 100%;
     height: auto;
+    margin: auto;
 }
 
-#titulo{
+header>figure{
+  margin: auto;
+}
+
+header>h1{
     font-family: 'Khula', sans-serif;
     color: #040A22;
-    font-size: 5rem;
+    font-size: 5vw;
     position:absolute;
-    bottom: 0px;
-    right: 100px;
+    bottom: 5%;
+    right: 5%;
     margin: 0px;
 }
 
@@ -126,7 +131,7 @@ nav{
 #calendario{
     width: auto;
     height: 40%;
-    grid-column: 3/4; 
+    grid-column: 3/4;
     grid-row: 2;
 }
 
@@ -158,4 +163,3 @@ footer li{
     height: auto;
     align-self: start;
 }
-

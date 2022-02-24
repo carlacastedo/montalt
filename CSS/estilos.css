@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: #F2F2F2;
+    margin: 0px;
+}
+
+.imgconfoto{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+#imgcabecera{
+    width: 100%;
+    height: auto;
+}
+
+#titulo{
+    font-family: 'Khula', sans-serif;
+    color: #040A22;
+    font-size: 5rem;
+    position:absolute;
+    bottom: 0px;
+    right: 100px;
+    margin: 0px;
+}
+
+h2{
+    font-size: 1.5rem;
+    color: #1F1F26;
+}
+
+p{
+    color: #1F1F26;
+}
+
+.tirafotos{
+    background-color: #2B5F8C;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 5px;
+}
+
+.tirafotos > img{
+    padding: 5px;
+    position: relative;
+    width: auto;
+    height: 200px;
+    display: inline-block;
+}
+
+nav{
+    max-width: 100%;
+    margin: auto;
+    background-color: #1D5273;
+    font-size: 25px;
+}
+.menuhorizontal{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.menuhorizontal > li{
+    color: #F2F2F2;
+    padding: 30px 60px;
+    float: left;
+}
+
+.menuhorizontal>li a, ul{
+    display: inline-block;
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+
+.menuhorizontal > li:hover{
+    background-color: #2B5F8C;
+}
+
+.menuvertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    z-index: 1;
+    background-color: #2B5F8C;
+}
+
+.menuhorizontal li:hover .menuvertical{
+    display: block;
+}
+
+.menuvertical li:hover{
+    background-color: #2B5F8C;
+}
+
+.menuvertical li a{
+    display: block;
+    color: #F2F2F2;
+    text-decoration: none;
+    text-align: left
+}
+
+.cuerpo1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.cuerpo1 .info{
+    padding: 15px 30px;
+    grid-column: 1/3;
+    grid-row: 2;
+}
+
+#calendario{
+    width: auto;
+    height: 40%;
+    grid-column: 3/4; 
+    grid-row: 2;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 30px;
+    color: #F2F2F2;
+    width: 100%;
+    background-color: #1F1F26;
+}
+footer ul{
+    margin: 0px;
+    padding: 0px;
+}
+footer li{
+    list-style: none;
+}
+.informacion{
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+}
+#logo{
+    grid-column: 1;
+    grid-row: 1;
+    width: 75%;
+    height: auto;
+    align-self: start;
+}
+

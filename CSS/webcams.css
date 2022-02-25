@@ -7,12 +7,9 @@ h2{
   font-weight: bold;
 }
 
-@media only screen (min-width: 600px){
-
-}
 .camaras{
   display: grid;
-  background-color: #2B5F8C;
+  background-color: var(--azul-grisaceo);
   grid-template-areas: "video1 video2" "video3 video4";
   margin: auto;
   grid-gap: 3vw;
@@ -40,10 +37,7 @@ h2{
 /*para pantallas pequeñas, como moviles*/
 @media (max-width: 600px){
   .camaras{
-    display: grid;
-    background-color: #2B5F8C;
     grid-template-areas: "video1" "video2" "video3" "video4";
-    margin: auto;
     grid-gap: 7vw;
     padding: 7vw;
   }

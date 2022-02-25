@@ -1,0 +1,44 @@
+@import "estilos.css";
+
+h2{
+  font-size: 2.5vw;
+  margin: auto;
+  padding: 2%;
+  font-weight: bold;
+}
+
+.mapa{
+  padding: 5vw;
+  background-color: var(--azul-grisaceo);
+  margin: auto;
+}
+
+.mapa>img{
+  margin: auto;
+  width: 100%;
+}
+
+table{
+  width: 100%;
+  border:solid;
+  border-collapse: collapse;
+  color: var(--negro);
+}
+
+th, td{
+  border:solid;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.facil{
+  color: #4eb349;
+}
+
+.intermedio{
+  color: blue;
+}
+
+.dificil{
+  color: red;
+}

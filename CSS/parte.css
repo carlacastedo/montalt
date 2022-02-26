@@ -1,0 +1,56 @@
+@import "estilos.css";
+
+h2{
+  font-size: 2.5vw;
+  margin: auto;
+  padding: 2%;
+  font-weight: bold;
+}
+
+h3{
+  text-align: center;
+}
+
+.contenedor{
+  background-color: var(--azul-grisaceo);
+}
+
+.circulos{
+  display: grid;
+  grid-template-areas: "verde azul rojo negro";
+  width: 100%;
+}
+
+.circulos p{
+  position: relative;
+  color: var(--casi-blanco);
+  text-align: center;
+
+}
+
+.circulos > div{
+  margin: auto;
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+}
+
+.verde{
+  background-color: #4eb349;
+  grid-area: verde;
+}
+
+.azul{
+  background-color: #179fd2;
+  grid-area: azul;
+}
+
+.rojo{
+  background-color: red;
+  grid-area: rojo;
+}
+
+.negro{
+  background-color: black;
+  grid-area: negro;
+}

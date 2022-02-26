@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
 
+:root{
+  --negro: #1F1F26;
+  --gris: #989DA6;
+  --azul-grisaceo: #50769C;
+  --azul-fuerte: #1D5273;
+  --casi-blanco: #F2F2F2;
+}
+
 html{
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 body{
-    background-color: #F2F2F2;
+    background-color: var(--casi-blanco);
     margin: 0px;
 }
 
@@ -47,7 +55,7 @@ p{
 }
 
 .tirafotos{
-    background-color: #2B5F8C;
+    background-color: var(--azul-fuerte);
     width: 100%;
     height: auto;
     margin: auto;
@@ -77,7 +85,7 @@ nav{
 }
 
 .menuhorizontal > li{
-    color: #F2F2F2;
+    color: var(--casi-blanco);
     padding: 30px 60px;
     float: left;
 }
@@ -85,12 +93,12 @@ nav{
 .menuhorizontal>li a, ul{
     display: inline-block;
     text-decoration: none;
-    color: #F2F2F2;
+    color: var(--casi-blanco);
 }
 
 
 .menuhorizontal > li:hover{
-    background-color: #2B5F8C;
+    background-color: var(--azul-grisaceo);
 }
 
 .menuvertical{
@@ -98,7 +106,7 @@ nav{
     display: none;
     list-style: none;
     z-index: 1;
-    background-color: #2B5F8C;
+    background-color: ;
 }
 
 .menuhorizontal li:hover .menuvertical{
@@ -106,60 +114,87 @@ nav{
 }
 
 .menuvertical li:hover{
-    background-color: #2B5F8C;
+    background-color: var(--azul-grisaceo);
 }
 
 .menuvertical li a{
     display: block;
-    color: #F2F2F2;
+    color: var(--casi-blanco);
     text-decoration: none;
     text-align: left
 }
 
-.cuerpo1{
+.cuerpo{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-areas: "informacion informacion foto" "informacion informacion foto";
+    grid-gap: 3vw;
+    margin: auto;
+    padding: 2vw;
 }
 
-.cuerpo1 .info{
-    padding: 15px 30px;
-    grid-column: 1/3;
-    grid-row: 2;
+.info{
+  margin: auto;
+  grid-area: informacion;
+  text-align: justify;
 }
 
-#calendario{
-    width: auto;
-    height: 40%;
-    grid-column: 3/4;
-    grid-row: 2;
+.info > h2{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.calendario{
+    margin: auto;
+    width: auto;;
+}
+
+.calendario > img{
+  margin: auto;
+  width: 100%;
+  grid-area: foto;
 }
 
 footer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 30px;
-    color: #F2F2F2;
-    width: 100%;
-    background-color: #1F1F26;
+    grid-template-areas: "logo contacto";
+    color: var(--casi-blanco);
+    background-color: var(--negro);
+    font-size: 1vw;
+    margin: auto;
 }
+
+.informacion>h3{
+  margin-bottom: 1%;
+  margin: auto;
+}
+
 footer ul{
     margin: 0px;
     padding: 0px;
 }
+
 footer li{
     list-style: none;
 }
+
 .informacion{
-    grid-column: 3;
-    grid-row: 1;
-    align-self: start;
+    grid-area: contacto;
+    margin: auto;
 }
-#logo{
-    grid-column: 1;
-    grid-row: 1;
-    width: 75%;
-    height: auto;
-    align-self: start;
+
+.logo{
+  grid-area: logo;
+  width: 25%;
+  height: auto;
+  margin: auto;
+}
+
+.logo>img{
+  width: 100%;
+}
+
+@media (max-width: 600px){
+  .cuerpo{
+      grid-template-areas: "informacion" "foto";
+  }
 }

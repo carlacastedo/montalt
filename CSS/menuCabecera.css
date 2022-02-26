@@ -1,0 +1,153 @@
+/*@import "estilos.css"*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: #F2F2F2;
+    margin: 0px;
+    paddin: 0px;
+}
+
+header{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    background-color: #1D5273;
+}
+
+header>a>figure{
+  width: 15%;
+  height: auto;
+  position: absolute;
+  right: 0px;
+  padding: 0%;
+  margin: 0;
+  display: inline-block;
+}
+
+#logoCabecera{
+  width: 100%;
+  height: auto;
+}
+
+header>h1{
+  padding: 0%;
+  margin: 0%;
+  position: relative;
+  left: 25%;
+  width:50%;
+  display: inline-block;
+}
+header>h1>a{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Khula', sans-serif;
+    color: #F2F2F2;
+    font-size: 5vw;
+    text-decoration: none;
+}
+
+h2{
+    font-size: 1.5vw;
+    color: #1F1F26;
+}
+
+/*Menu*/
+header>label>img{
+  height: 5vw;
+  width: 5vw;
+}
+
+#btn-menu {
+  display: none;
+}
+
+header>label{
+  display:inline-block;
+  height: 5vw;
+  width: 5vw;
+  padding: 1vw;
+  position: absolute;
+  left: 0%;
+}
+
+header>label:hover{
+  cursor:pointer;
+  background: rgba(0,0,0,0.3);
+}
+
+.menu, .submenu, .menu>ul, .submenu>ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#btn-menu:checked ~ .menu{
+  margin:0;
+}
+
+.menu{
+  position: absolute;
+  background: #1D5273;
+  width: 25%;
+  margin-left: -35%;
+  transition: all 0.5s;
+}
+
+.menu>ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu>ul>li{
+  display: block;
+  padding: 15px 20px;
+  color: #F2F2F2;
+  position: relative;
+}
+
+.menu>ul>li>a{
+  display: block;
+  color: #F2F2F2;
+  text-decoration: none;
+}
+
+.menu>ul>li:hover{
+  background: rgba(0,0,0,0.3);
+}
+
+.submenu{
+  list-style: none;
+  display: none;
+  background: #1D5273;
+  width: 75%;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+
+.submenu>li{
+  padding: 15px 20px;
+}
+
+.menu>ul>li:hover>ul{
+  transition: all 0.5s;
+  display: block;
+}
+
+.submenu>li>a{
+  color: #F2F2F2;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu>li:hover{
+  background: rgba(0,0,0,0.3);
+}

@@ -1,0 +1,51 @@
+@import "estilos.css";
+
+p {
+  color: var(--casi-blanco);
+}
+
+h2{
+  font-size: 2.5vw;
+  margin: auto;
+  padding: 2%;
+  font-weight: bold;
+}
+
+.contenedor {
+  background-color: var(--azul-grisaceo);
+  color: var(--casi-blanco);
+  display: grid;
+  grid-template-areas: 'informacion informacion precios precios precios'
+    'informacion informacion precios precios precios'
+    'informacion informacion precios precios precios';
+  grid-gap: 1vw;
+  padding: 1vw;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.informacion {
+  grid-area: informacion;
+  text-align: justify;
+  margin: auto;
+}
+
+.precios {
+  grid-area: precios;
+  margin: auto;
+  text-align: center;
+}
+
+.precios >table{
+  margin: auto;
+}
+
+.contenedor .precios figure {
+  margin: auto;
+}
+
+.contenedor .precios>figure>img {
+  width: 75%;
+  height: auto;
+  padding-right: 0px;
+}

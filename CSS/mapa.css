@@ -18,18 +18,35 @@ h2{
   width: 100%;
 }
 
-table{
+
+.tabla{
   width: 100%;
-  border:solid;
-  border-collapse: collapse;
   color: var(--negro);
+  padding: 1vw;
+  box-sizing: border-box;
+  margin: 1vw auto;
+}
+
+.tabla > table{
+  width: 100%;
+}
+
+caption{
+  margin: 1vw;
+  font-size: 2vw;
+}
+
+.caption2{
+  border-top: 1px solid var(--negro);
+  padding-top: 1vw;
 }
 
 th, td{
-  border: solid;
-  border-collapse: collapse;
   text-align: center;
+  padding: 1vw;
 }
+
+/*colores de los elementos de las tablas*/
 
 .facil{
   color: #4eb349;
@@ -40,5 +57,13 @@ th, td{
 }
 
 .dificil{
+  color: red;
+}
+
+.abierto{
+  color: green;
+}
+
+.cerrado{
   color: red;
 }

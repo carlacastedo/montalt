@@ -26,7 +26,7 @@ table{
 }
 
 th, td{
-  border:solid;
+  border: solid;
   border-collapse: collapse;
   text-align: center;
 }
@@ -36,7 +36,7 @@ th, td{
 }
 
 .intermedio{
-  color: blue;
+  color: #179fd2;
 }
 
 .dificil{

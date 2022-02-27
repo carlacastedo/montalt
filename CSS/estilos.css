@@ -21,6 +21,7 @@ body {
   padding: 0px;
 }
 
+<<<<<<< HEAD
 footer {
   display: inline-block;
   color: var(--casi-blanco);
@@ -31,6 +32,19 @@ footer {
   position: relative;
   width: 100%;
   height: auto;}
+=======
+footer{
+    display: inline-block;
+    color: var(--gris);
+    background-color: var(--negro);
+    font-size: 1vw;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+>>>>>>> fb86e2b9d5b37f82ff142c5555db0f217a513bfa
 
 footer>figure {
   width: 20%;

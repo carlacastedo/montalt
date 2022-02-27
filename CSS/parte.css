@@ -7,49 +7,100 @@ h2 {
   font-weight: bold;
 }
 
-h3 {
-  text-align: center;
-}
-
 .contenedor {
   background-color: var(--azul-grisaceo);
+  color: var(--casi-blanco);
+  display: inline-block;
+  position: relative;
 }
 
-.circulos {
-  display: grid;
-  grid-template-areas: "verde azul rojo negro";
+.contenedor>ul {
+  position: absolute;
+  left: 0px;
+}
+
+.contenedor li {
+  list-style: none;
+  padding: 1vw;
+}
+
+.contenedor>figure {
+  position: relative;
+  right: 0px;
+  width: 25%;
+}
+
+.contenedor>figure>img {
   width: 100%;
 }
 
-.circulos p {
-  position: relative;
-  color: var(--casi-blanco);
+#desglose {
   text-align: center;
+  color: var(--negro);
+}
+
+.circulos {
+  width: 100%;
+  text-align: center;
+  display: inline-flex;
+  padding-bottom: 3vw;
 }
 
 .circulos>div {
   margin: auto;
-  width: auto;
-  height: auto;
+  color: var(--casi-blanco);
+  font-size: 2vw;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
+  transition: width 0.5s, height 0.5s;
 }
 
+/*ampliaciond de los circulos al pasar el raton por encima*/
+.circulos>div:hover{
+  width: 20vw;
+  height: 20vw;
+  cursor: pointer;
+  font-size: 0;
+}
+
+/*texto despues*/
+.circulos>.verde:hover p:after{
+  content: "Ala Blanca\A El pinet\A Ronda Corta";
+  font-size: 2vw;
+  white-space: pre;
+}
+
+.circulos>.azul:hover .contenido:after{
+  content: "Paseo\A Rodombolo\A Vuelta a casa";
+  font-size: 2vw;
+  white-space: pre;
+}
+
+.circulos>.rojo:hover .contenido:after{
+  content: "Ronda larga\A Travesía I\A Mont Alt";
+  font-size: 2vw;
+  white-space: pre;
+}
+
+.circulos>.negro:hover .contenido:after{
+  content: "Ciervo negro";
+  font-size: 2vw;
+}
+
+/*colores de fondo de los circulos*/
 .verde {
   background-color: #4eb349;
-  grid-area: verde;
 }
 
 .azul {
   background-color: #179fd2;
-  grid-area: azul;
 }
 
 .rojo {
   background-color: red;
-  grid-area: rojo;
 }
 
 .negro {
   background-color: black;
-  grid-area: negro;
 }

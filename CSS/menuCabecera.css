@@ -14,8 +14,8 @@ header>a>figure{
   width: 15%;
   height: auto;
   position: absolute;
-  right: 0px;
-  padding: 0%;
+  right: 0;
+  padding: 0;
   margin: 0;
   display: inline-block;
 }
@@ -34,8 +34,8 @@ header>h1{
   display: inline-block;
 }
 header>h1>a{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     font-family: 'Khula', sans-serif;
     color: #F2F2F2;
     font-size: 5vw;

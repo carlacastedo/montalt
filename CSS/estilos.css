@@ -22,7 +22,7 @@ body{
 
 footer{
     display: inline-block;
-    color: var(--casi-blanco);
+    color: var(--gris);
     background-color: var(--negro);
     font-size: 1vw;
     padding: 0;
@@ -71,6 +71,7 @@ footer>figure>img{
     padding-top: 0.3vw;
     padding-left: 0.5vw;
     margin: 0;
+    color: var(--gris);
 }
 
 }

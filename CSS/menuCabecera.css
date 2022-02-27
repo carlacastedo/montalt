@@ -1,17 +1,15 @@
 @import "estilos.css";
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
 
-
-header{
-    position: relative;
-    padding: 0px;
-    margin: 0px;
-    background-color: #1D5273;
+header {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  background-color: #1D5273;
 }
 
-header>a>figure{
+header>a>figure {
   width: 15%;
   height: auto;
   position: absolute;
@@ -21,36 +19,40 @@ header>a>figure{
   display: inline-block;
 }
 
-#logoCabecera{
+#logoCabecera {
   width: 100%;
   height: auto;
 }
 
-header>h1{
+header>h1 {
   padding: 0%;
   margin: 0%;
   position: relative;
   left: 25%;
-  width:50%;
+  width: 50%;
   display: inline-block;
 }
-header>h1>a{
-    padding: 0;
-    margin: 0;
-    font-family: 'Khula', sans-serif;
-    color: #F2F2F2;
-    font-size: 5vw;
-    text-decoration: none;
+
+header>h1>a {
+  padding: 0;
+  margin: 0;
+  font-family: 'Khula', sans-serif;
+  color: #F2F2F2;
+  font-size: 5vw;
+  text-decoration: none;
 }
 
-h2{
-    font-size: 1.5vw;
-    color: #1F1F26;
-    /* font-style: bold; */
+h2 {
+  font-size: 2.5vw;
+  margin: auto;
+  padding: 2%;
+  /*negrita mas fuerte*/
+  font-weight: 800;
+  color: var(--negro);
 }
 
 /*Menu*/
-header>label>img{
+header>label>img {
   height: 5vw;
   width: 5vw;
 }
@@ -59,8 +61,8 @@ header>label>img{
   display: none;
 }
 
-header>label{
-  display:inline-block;
+header>label {
+  display: inline-block;
   height: 5vw;
   width: 5vw;
   padding: 1vw;
@@ -69,22 +71,22 @@ header>label{
   top: 0%;
 }
 
-header>label:hover{
-  cursor:pointer;
-  background: rgba(0,0,0,0.3);
+header>label:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.menu, .submenu, .menu>ul, .submenu>ul{
+.menu, .submenu, .menu>ul, .submenu>ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#btn-menu:checked ~ .menu{
-  margin:0;
+#btn-menu:checked~.menu {
+  margin: 0;
 }
 
-.menu{
+.menu {
   position: absolute;
   background: #1D5273;
   width: 25%;
@@ -92,30 +94,30 @@ header>label:hover{
   transition: all 0.5s;
 }
 
-.menu>ul{
+.menu>ul {
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 
-.menu>ul>li{
+.menu>ul>li {
   display: block;
   padding: 15px 20px;
   color: #F2F2F2;
   position: relative;
 }
 
-.menu>ul>li>a{
+.menu>ul>li>a {
   display: block;
   color: #F2F2F2;
   text-decoration: none;
 }
 
-.menu>ul>li:hover{
-  background: rgba(0,0,0,0.3);
+.menu>ul>li:hover {
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.submenu{
+.submenu {
   list-style: none;
   display: none;
   background: #1D5273;
@@ -125,21 +127,21 @@ header>label:hover{
   left: 100%;
 }
 
-.submenu>li{
+.submenu>li {
   padding: 15px 20px;
 }
 
-.menu>ul>li:hover>ul{
+.menu>ul>li:hover>ul {
   transition: all 0.5s;
   display: block;
 }
 
-.submenu>li>a{
+.submenu>li>a {
   color: #F2F2F2;
   text-decoration: none;
   display: block;
 }
 
-.submenu>li:hover{
-  background: rgba(0,0,0,0.3);
+.submenu>li:hover {
+  background: rgba(0, 0, 0, 0.3);
 }

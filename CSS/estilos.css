@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
 :root {
   --negro: #1F1F26;
@@ -13,6 +12,12 @@
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5vw;
+  font-weight: 400;
+}
+
+/*negrita mas ligera*/
+h3, th{
+  font-weight: 600;
 }
 
 body {
@@ -21,7 +26,6 @@ body {
   padding: 0px;
 }
 
-<<<<<<< HEAD
 footer {
   display: inline-block;
   color: var(--casi-blanco);
@@ -31,20 +35,8 @@ footer {
   margin: 0;
   position: relative;
   width: 100%;
-  height: auto;}
-=======
-footer{
-    display: inline-block;
-    color: var(--gris);
-    background-color: var(--negro);
-    font-size: 1vw;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    width: 100%;
-    height: auto;
+  height: auto;
 }
->>>>>>> fb86e2b9d5b37f82ff142c5555db0f217a513bfa
 
 footer>figure {
   width: 20%;

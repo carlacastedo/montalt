@@ -51,58 +51,61 @@ p{
     display: inline-block;
 }
 
-nav{
-    max-width: 100%;
-    margin: auto;
-    background-color: #1D5273;
-    font-size: 25px;
-}
-.menuhorizontal{
-    list-style: none;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
+.menu, .submenu, .menu>ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.menuhorizontal > li{
-    color: var(--casi-blanco);
-    padding: 30px 60px;
-    float: left;
+.menu{
+  background: #1D5273;
 }
 
-.menuhorizontal>li a, ul{
-    display: inline-block;
-    text-decoration: none;
-    color: var(--casi-blanco);
+.menu>ul{
+  list-style: none;
+  display: flex;
 }
 
-
-.menuhorizontal > li:hover{
-    background-color: var(--azul-grisaceo);
+.menu>ul>li{
+  display: block;
+  padding: 25px 20px;
+  color: #F2F2F2;
+  flex-grow: 1;
+  text-align: center;
+  position: relative;
 }
 
-.menuvertical{
-    position: absolute;
-    display: none;
-    list-style: none;
-    z-index: 1;
-    background-color: ;
+.menu>ul>li>a {
+  display: block;
+  color: #F2F2F2;
+  text-decoration: none;
 }
 
-.menuhorizontal li:hover .menuvertical{
-    display: block;
+.menu li:hover{
+  transition: all 0.5s;
+  background: rgba(0,0,0,0.3);
 }
 
-.menuvertical li:hover{
-    background-color: var(--azul-grisaceo);
+.menu>ul>li:hover>ul{
+  transition: all 0.5s;
+  display: block;
 }
 
-.menuvertical li a{
-    display: block;
-    color: var(--casi-blanco);
-    text-decoration: none;
-    text-align: left
+.submenu{
+  list-style: none;
+  display: none;
+  background: #1D5273;
+  width: 100%;
+  position: absolute;
+  right: 0%;
+  top: 100%;
+}
+
+.submenu>li>a{
+  text-decoration: none;
+  color: #F2F2F2;
+  display: block;
+  padding: 15px 20px;
 }
 
 .cuerpo{

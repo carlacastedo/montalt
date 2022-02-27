@@ -64,6 +64,7 @@ header>label{
   padding: 1vw;
   position: absolute;
   left: 0%;
+  top: 0%;
 }
 
 header>label:hover{

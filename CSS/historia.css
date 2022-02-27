@@ -1,0 +1,30 @@
+@import "menuCabecera.css";
+
+.contenedor {
+  background-color: var(--azul-grisaceo);
+  color: var(--casi-blanco);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  padding: 4vw;
+  column-gap: 6vw;
+}
+
+.info{
+  grid-column: 1/2;
+  text-align: justify;
+}
+
+.imagenes{
+  grid-column: 2/4;
+  margin:0;
+  padding: 1vw;
+  text-align: right;
+}
+
+.imagenes img{
+  width: 100%;
+  padding: 1vw;
+  height: auto;
+
+}

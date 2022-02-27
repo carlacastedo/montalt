@@ -1,18 +1,7 @@
-/*@import "estilos.css"*/
+@import "estilos.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
-
-html{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-}
-
-body{
-    background-color: #F2F2F2;
-    margin: 0px;
-    paddin: 0px;
-}
 
 header{
     position: relative;

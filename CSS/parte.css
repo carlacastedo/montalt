@@ -1,56 +1,55 @@
 @import "menuCabecera.css";
 
-h2{
+h2 {
   font-size: 2.5vw;
   margin: auto;
   padding: 2%;
   font-weight: bold;
 }
 
-h3{
+h3 {
   text-align: center;
 }
 
-.contenedor{
+.contenedor {
   background-color: var(--azul-grisaceo);
 }
 
-.circulos{
+.circulos {
   display: grid;
   grid-template-areas: "verde azul rojo negro";
   width: 100%;
 }
 
-.circulos p{
+.circulos p {
   position: relative;
   color: var(--casi-blanco);
   text-align: center;
-
 }
 
-.circulos > div{
+.circulos>div {
   margin: auto;
   width: auto;
   height: auto;
   border-radius: 50%;
 }
 
-.verde{
+.verde {
   background-color: #4eb349;
   grid-area: verde;
 }
 
-.azul{
+.azul {
   background-color: #179fd2;
   grid-area: azul;
 }
 
-.rojo{
+.rojo {
   background-color: red;
   grid-area: rojo;
 }
 
-.negro{
+.negro {
   background-color: black;
   grid-area: negro;
 }

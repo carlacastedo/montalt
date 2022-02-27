@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
-:root{
+:root {
   --negro: #1F1F26;
   --gris: #989DA6;
   --azul-grisaceo: #50769C;
@@ -9,30 +10,30 @@
   --casi-blanco: #F2F2F2;
 }
 
-html{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5vw;
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5vw;
 }
 
-body{
-    background-color: var(--casi-blanco);
-    margin: 0px;
-    padding: 0px;
+body {
+  background-color: var(--casi-blanco);
+  margin: 0px;
+  padding: 0px;
 }
 
-footer{
-    display: inline-block;
-    color: var(--casi-blanco);
-    background-color: var(--negro);
-    font-size: 1vw;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    width: 100%;
-    height: auto;
+footer {
+  display: inline-block;
+  color: var(--casi-blanco);
+  background-color: var(--negro);
+  font-size: 1vw;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
-footer>figure{
+footer>figure {
   width: 20%;
   height: auto;
   display: inline-block;
@@ -43,34 +44,32 @@ footer>figure{
   margin: 0;
 }
 
-footer>figure>img{
-  width:100%;
+footer>figure>img {
+  width: 100%;
   height: auto;
 }
 
-#informacion{
+#informacion {
   display: inline-block;
   padding: 3vw;
   padding-bottom: 4vw;
   margin: auto;
 }
 
-#informacion>h3{
+#informacion>h3 {
   padding-bottom: 0.75vw;
   margin: 0;
   font-size: 1.5vw;
 }
 
-#informacion>ul{
-    margin: 0;
-    padding: 0;
+#informacion>ul {
+  margin: 0;
+  padding: 0;
 }
 
-#informacion>ul>li{
-    list-style: none;
-    padding-top: 0.3vw;
-    padding-left: 0.5vw;
-    margin: 0;
-}
-
+#informacion>ul>li {
+  list-style: none;
+  padding-top: 0.3vw;
+  padding-left: 0.5vw;
+  margin: 0;
 }

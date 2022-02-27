@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Khula:wght@800&display=swap');
 
+
 header{
     position: relative;
     padding: 0px;
@@ -45,6 +46,7 @@ header>h1>a{
 h2{
     font-size: 1.5vw;
     color: #1F1F26;
+    /* font-style: bold; */
 }
 
 /*Menu*/

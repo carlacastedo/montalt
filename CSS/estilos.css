@@ -30,8 +30,7 @@ footer {
   margin: 0;
   position: relative;
   width: 100%;
-  height: auto;
-}
+  height: auto;}
 
 footer>figure {
   width: 20%;
@@ -65,6 +64,14 @@ footer>figure>img {
 #informacion>ul {
   margin: 0;
   padding: 0;
+}
+
+#informacion>ul>li{
+    list-style: none;
+    padding-top: 0.3vw;
+    padding-left: 0.5vw;
+    margin: 0;
+    color: var(--gris);
 }
 
 #informacion>ul>li {

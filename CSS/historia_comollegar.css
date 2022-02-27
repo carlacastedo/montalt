@@ -15,16 +15,21 @@
   text-align: justify;
 }
 
-.imagenes{
+.media{
   grid-column: 2/4;
   margin:0;
   padding: 1vw;
   text-align: right;
 }
 
-.imagenes img{
+.media img{
   width: 100%;
   padding: 1vw;
   height: auto;
-
 }
+
+.media iframe{
+  width: 100%;
+  padding: 1vw;
+  height: auto;
+  }

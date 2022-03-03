@@ -10,26 +10,26 @@
   column-gap: 6vw;
 }
 
-.info{
+.info {
   grid-column: 1/2;
   text-align: justify;
 }
 
-.media{
+.media {
   grid-column: 2/4;
-  margin:0;
+  margin: 0;
   padding: 1vw;
   text-align: right;
 }
 
-.media img{
+.media img {
   width: 100%;
   padding: 1vw;
   height: auto;
 }
 
-.media iframe{
+.media iframe {
   width: 100%;
   padding: 1vw;
   height: auto;
-  }
+}

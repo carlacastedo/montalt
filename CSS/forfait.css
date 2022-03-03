@@ -1,0 +1,62 @@
+@import "menuCabecera.css";
+
+.contenedor {
+  background-color: var(--azul-grisaceo);
+  color: var(--casi-blanco);
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 100%;
+}
+
+.contenedor h3 {
+  color: var(--negro);
+  margin: auto;
+}
+
+.contenedor p {
+  margin-top: 0.3vw;
+}
+
+.info {
+  font-size: 120%;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-align: justify;
+  padding: 5vw 5vw 5vw 2.5vw;
+}
+
+.col1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 5vw 2.5vw 5vw 5vw;
+}
+
+.col1 h3{
+  font-size: 120%;
+}
+
+.col1>figure {
+  width: 60%;
+  margin: auto;
+  padding-top: 1vw;
+}
+
+.col1 img {
+  width: 100%;
+}
+
+.tabla{
+  padding: 1vw 0;
+}
+
+.tabla table {
+  border: solid 1px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: solid 1px;
+  padding: 0.5vw;
+  text-align: center;
+}

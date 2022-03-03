@@ -1,0 +1,55 @@
+@import "menuCabecera.css";
+
+.actividad-azul {
+  background-color: var(--azul-grisaceo);
+  color: var(--casi-blanco);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vw;
+}
+
+.actividad-azul img, .actividad-blanca img{
+  width: 100%;
+}
+
+.actividad-azul figure{
+  margin: auto;
+  padding-left: 4vw;
+}
+
+.actividad-blanca figure{
+  margin: auto;
+  padding-right: 4vw;
+}
+
+.texto{
+  text-align: justify;
+}
+
+.actividad-blanca {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  color: var(--negro);
+  align-items: center;
+  padding: 4vw;
+}
+
+@media (max-width: 600px) {
+  .actividad-azul, .actividad-blanca {
+    flex-direction: column;
+    padding:
+  }
+
+  .actividad-blanca figure, .actividad-azul figure{
+    padding-top: 2vw;
+    padding-left: 0;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 5vw;
+  }
+}

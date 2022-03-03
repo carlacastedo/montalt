@@ -10,24 +10,31 @@ h2 {
 .contenedor {
   background-color: var(--azul-grisaceo);
   color: var(--casi-blanco);
-  display: inline-block;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info{
+  width: 50%;
 }
 
 .contenedor>ul {
-  position: absolute;
-  left: 0px;
+  margin: auto;
 }
 
 .contenedor li {
   list-style: none;
-  padding: 1vw;
+  padding: 1.2vw;
+  text-align: justify;
+  font-size: 2.2vw;
 }
 
 .contenedor>figure {
-  position: relative;
-  right: 0px;
   width: 25%;
+  margin: auto;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
 }
 
 .contenedor>figure>img {

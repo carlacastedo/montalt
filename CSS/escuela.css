@@ -15,37 +15,54 @@ h2{
   background-color: var(--azul-grisaceo);
   color: var(--casi-blanco);
   display: grid;
-  grid-template-areas: 'informacion informacion precios precios precios'
-    'informacion informacion precios precios precios'
-    'informacion informacion precios precios precios';
-  grid-gap: 1vw;
-  padding: 1vw;
-  margin: auto;
-  justify-content: space-around;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  column-gap: 1vw;
 }
 
-.informacion {
-  grid-area: informacion;
+.info{
+  grid-column: 1/2;
   text-align: justify;
-  margin: auto;
+  margin: 3vw;
+  margin-left: 6vw;
 }
 
-.precios {
-  grid-area: precios;
-  margin: auto;
+.varios{
+  grid-column: 2/3;
+  margin:auto;
+  margin-top: 3vw;
   text-align: center;
 }
 
-.precios >table{
-  margin: auto;
-}
-
-.contenedor .precios figure {
-  margin: auto;
-}
-
-.contenedor .precios>figure>img {
+.varios p{
   width: 75%;
+  margin: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.tabla{
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.varios figure{
+  width: 80%;
   height: auto;
-  padding-right: 0px;
+  margin: auto;
+}
+.varios img{
+  width: 90%;
+  height: auto;
+  padding: 1vw;
+  margin: auto;
+  margin-bottom: 2vw;
+}
+
+.varios table{
+  margin: auto;
+}
 }

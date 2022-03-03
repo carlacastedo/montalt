@@ -4,32 +4,41 @@
   background-color: var(--azul-grisaceo);
   color: var(--casi-blanco);
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-areas: "info bus" "info mapa";
   justify-content: space-evenly;
   padding: 4vw;
-  column-gap: 6vw;
+  column-gap: 4vw;
+  row-gap: 4vw;
 }
 
 .info {
-  grid-column: 1/2;
+  grid-area: info;
   text-align: justify;
 }
 
-.media {
-  grid-column: 2/4;
-  margin: 0;
-  padding: 1vw;
-  text-align: right;
+.bus{
+  grid-area: bus;
+  width: 100%;
+  margin: auto;
 }
 
-.media img {
+.mapa{
+  grid-area: mapa;
   width: 100%;
-  padding: 1vw;
+  margin: auto;
+}
+
+.bus img {
+  width: 100%;
   height: auto;
 }
 
-.media iframe {
+.mapa iframe {
   width: 100%;
-  padding: 1vw;
+  height: auto;
+}
+
+.mapa img {
+  width: 100%;
   height: auto;
 }

@@ -43,6 +43,7 @@ h2 {
 
 #desglose {
   text-align: center;
+  font-size: 2.5vw;
   color: var(--negro);
 }
 
@@ -50,17 +51,21 @@ h2 {
   width: 100%;
   text-align: center;
   display: inline-flex;
-  padding-bottom: 3vw;
+  fl
+  padding: 4vw 0;
+  box-sizing: border-box;
 }
 
 .circulos>div {
   margin: auto;
   color: var(--casi-blanco);
   font-size: 2vw;
-  width: 10vw;
-  height: 10vw;
+  display: inherit;
+  width: 13vw;
+  height: 13vw;
   border-radius: 50%;
-  transition: width 0.5s, height 0.5s;
+  transition: width 0.33s, height 0.33s;
+
 }
 
 /*ampliaciond de los circulos al pasar el raton por encima*/
@@ -68,7 +73,7 @@ h2 {
   width: 20vw;
   height: 20vw;
   cursor: pointer;
-  font-size: 0;
+  font-size: 0px;
 }
 
 /*texto despues*/
@@ -93,6 +98,10 @@ h2 {
 .circulos>.negro:hover .contenido:after{
   content: "Ciervo negro";
   font-size: 2vw;
+}
+
+.circulos *{
+  margin: auto;
 }
 
 /*colores de fondo de los circulos*/

@@ -15,8 +15,12 @@ html {
   font-weight: 400;
 }
 
+p{
+  margin-top: 0;
+}
+
 /*negrita mas ligera*/
-h3, th{
+h3, th {
   font-weight: 600;
 }
 
@@ -79,19 +83,18 @@ footer>figure>img {
     margin: 0;
     color: var(--gris);
 } */
-
- footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: var(--gris);
-    background-color: var(--negro);
-    font-size: 1vw;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: auto;
-    align-items: center;
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--gris);
+  background-color: var(--negro);
+  font-size: 1vw;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  align-items: center;
 }
 
 footer>figure {
@@ -120,16 +123,16 @@ footer>figure>img {
   padding: 0;
 }
 
-#informacion>ul>li{
-    list-style: none;
-    padding-top: 0.3vw;
-    padding-left: 0.5vw;
-    margin: 0;
-    color: var(--gris);
+#informacion>ul>li {
+  list-style: none;
+  padding-top: 0.3vw;
+  padding-left: 0.5vw;
+  margin: 0;
+  color: var(--gris);
 }
 
-@media (max-width: 600px){
-  footer{
+@media (max-width: 600px) {
+  footer {
     flex-direction: column;
   }
 
@@ -138,7 +141,7 @@ footer>figure>img {
     height: auto;
   }
 
-  * {
+  /* * {
     font-size: 3vw;
-  }
+  } */
 }

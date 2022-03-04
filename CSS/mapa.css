@@ -1,7 +1,7 @@
 @import "menuCabecera.css";
 
 .mapa{
-  padding: 5vw;
+  padding: 4vw;
   background-color: var(--azul-grisaceo);
   margin: auto;
 }

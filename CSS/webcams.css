@@ -12,8 +12,8 @@ h2 {
   background-color: var(--azul-grisaceo);
   grid-template-areas: "video1 video2" "video3 video4";
   margin: auto;
-  grid-gap: 3vw;
-  padding: 3vw;
+  grid-gap: 4vw;
+  padding: 4vw;
 }
 
 .camaras > video{

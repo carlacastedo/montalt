@@ -4,6 +4,7 @@ header {
   position: relative;
   padding: 0px;
   margin: 0px;
+  line-height: 0;
 }
 
 header>figure>img {
@@ -21,7 +22,7 @@ header>h1 {
   color: #040A22;
   font-size: 5vw;
   position: absolute;
-  bottom: 5%;
+  bottom: 20%;
   right: 5%;
   margin: 0px;
 }

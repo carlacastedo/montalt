@@ -112,36 +112,59 @@ p {
 }
 
 .cuerpo {
-  display: grid;
-  grid-template-areas: "informacion informacion foto""informacion informacion foto";
-  grid-gap: 3vw;
+  display: flex;
+  flex-direction: row;
   margin: auto;
-  padding: 2vw;
+  padding: 4vw;
 }
 
 .info {
   margin: auto;
-  grid-area: informacion;
   text-align: justify;
 }
 
 .info>h2 {
   margin-top: 0px;
   margin-bottom: 0px;
+  padding-bottom: 1vw;
 }
 
 .calendario {
   margin: auto;
   width: auto;
+  padding-left: 4vw;
 }
 
 .calendario>img {
   margin: auto;
   width: 100%;
-  grid-area: foto;
 }
 
 @media (max-width: 600px) {
   .cuerpo {
-    grid-template-areas: "informacion" "foto";
+    flex-direction: column;
   }
+
+  .calendario{
+    padding-left: 0;
+  }
+
+  .menu *{
+    font-size: 2.3vw;
+  }
+
+  .info{
+    font-size: 3vw;
+  }
+
+  .info h2{
+    font-size: 4vw;
+  }
+
+  header>h1 {
+    font-size: 10vw;
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+  }
+}

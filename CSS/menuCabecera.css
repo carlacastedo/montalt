@@ -88,9 +88,9 @@ header>label:hover {
 .menu {
   position: absolute;
   background: #1D5273;
-  width: 25%;
+  width: 20%;
   margin-left: -35%;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .menu>ul {
@@ -120,7 +120,7 @@ header>label:hover {
   list-style: none;
   display: none;
   background: #1D5273;
-  width: 75%;
+  width: 100%;
   position: absolute;
   top: 0%;
   left: 100%;
@@ -154,5 +154,38 @@ header>label:hover {
   h3 {
     font-size: 4vw;
     margin-bottom: 1vw;
+  }
+
+  header>h1 {
+    height: 13vw;
+  }
+
+  header>h1>a {
+    font-size: 10vw;
+  }
+
+  header>label>img {
+    height: 11vw;
+    width: 11vw;
+  }
+
+  header>label {
+    height: 11vw;
+    width: 11vw;
+  }
+
+  header>a>figure{
+    width: 22%;
+  }
+
+  .menu *{
+    font-size: 3vw;
+  }
+
+  .submenu {
+    width: 100%;
+  }
+  .menu{
+    width: 35%;
   }
 }

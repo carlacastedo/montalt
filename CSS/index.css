@@ -28,7 +28,7 @@ header>h1 {
 }
 
 h2 {
-  font-size: 1.5vw;
+  font-size: 3vw;
   color: #1F1F26;
   font-weight: bold;
 }
@@ -115,6 +115,7 @@ p {
   display: flex;
   flex-direction: row;
   margin: auto;
+  font-size: 2vw;
   padding: 4vw;
 }
 

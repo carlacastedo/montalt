@@ -144,3 +144,14 @@ header>label:hover {
 .submenu>li:hover {
   background: rgba(0, 0, 0, 0.3);
 }
+
+@media (max-width: 600px) {
+  h2 {
+    text-align: center;
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+}

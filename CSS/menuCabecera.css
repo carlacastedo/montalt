@@ -48,6 +48,7 @@ h2 {
   /*negrita mas fuerte*/
   font-weight: 800;
   color: var(--negro);
+  background-color: var(--casi-blanco);
 }
 
 /*Menu*/
@@ -190,9 +191,6 @@ header>label:hover {
     width: 35%;
   }
 
-  .menu>ul>.eliminar_sep{
-    padding-top: 0;
-  }
 }
 
 

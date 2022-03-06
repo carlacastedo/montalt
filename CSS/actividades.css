@@ -22,6 +22,7 @@
 .actividad-blanca figure{
   margin: auto;
   padding-right: 4vw;
+
 }
 
 .texto{
@@ -35,6 +36,7 @@
   color: var(--negro);
   align-items: center;
   padding: 4vw;
+  background-color: var(--casi-blanco);
 }
 
 @media (max-width: 600px) or (orientation:portrait)  {

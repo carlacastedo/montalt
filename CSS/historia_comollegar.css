@@ -20,6 +20,7 @@
   grid-area: bus;
   width: 100%;
   margin: auto;
+  line-height: 0;
 }
 
 .mapa{

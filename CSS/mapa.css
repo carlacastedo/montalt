@@ -16,7 +16,8 @@
   color: var(--negro);
   padding: 1vw;
   box-sizing: border-box;
-  margin: 1vw auto;
+  margin: auto;
+  background-color: var(--casi-blanco);
 }
 
 .tabla>table {

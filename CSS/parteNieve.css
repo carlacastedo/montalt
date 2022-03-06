@@ -34,10 +34,17 @@
   width: 100%;
 }
 
+.pistas{
+  background-color: var(--casi-blanco);
+}
+
 #desglose {
+  background-color: var(--casi-blanco);
   text-align: center;
   font-size: 2.5vw;
   color: var(--negro);
+  margin-top: 0;
+  padding-top:2.5vw;
 }
 
 .circulos {

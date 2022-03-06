@@ -12,6 +12,12 @@ p {
   justify-content: space-evenly;
 }
 
+.contenedor h3{
+  color: var(--negro);
+  font-size: 2.5vw;
+  margin-top: 0;
+}
+
 .info {
   grid-column: 1/2;
   text-align: justify;
@@ -67,6 +73,10 @@ a{
     display: flex;
     flex-direction: column;
     font-size: 3vw;
+  }
+
+  .contenedor h3{
+    font-size: 4vw;
   }
 
   .varios{

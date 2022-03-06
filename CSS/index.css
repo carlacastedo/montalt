@@ -117,6 +117,7 @@ p {
   margin: auto;
   font-size: 2vw;
   padding: 4vw;
+  background-color: var(--casi-blanco);
 }
 
 .info {

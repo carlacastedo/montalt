@@ -135,18 +135,17 @@ header>label:hover {
   display: block;
 }
 
-
 .submenu>li>a {
   color: #F2F2F2;
   text-decoration: none;
   display: block;
 }
 
-.submenu>li:hover{
+.submenu>li:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
   h2 {
     text-align: center;
     font-size: 5vw;
@@ -184,15 +183,28 @@ header>label:hover {
   }
 
   .submenu {
-    width: 100%;
+    width: 110%;
   }
 
   .menu {
     width: 35%;
   }
+
+  .menu>ul>.eliminar_sep{
+    padding-top: 0;
+  }
 }
 
+
 @media (orientation:portrait) and (min-width: 600px) {
+  .menu * {
+    font-size: 2vw;
+  }
+
+  .menu {
+    width: 35%;
+  }
+
   h2 {
     text-align: center;
     font-size: 4vw;
@@ -201,5 +213,22 @@ header>label:hover {
   h3 {
     font-size: 3vw;
     margin-bottom: 1vw;
+  }
+}
+
+
+/*para pantallas tactiles el menu esta desplegado completamente*/
+@media (pointer:coarse){
+  .menu>ul>.eliminar_sep{
+    padding-top: 0;
+  }
+  .submenu {
+    display: block;
+    position: relative;
+    left: 0;
+  }
+
+  .submenu>li {
+    padding: 15px 20px;
   }
 }

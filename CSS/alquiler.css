@@ -1,15 +1,8 @@
 @import "menuCabecera.css";
 
-h2 {
-  font-size: 2.5vw;
-  margin: auto;
-  padding: 2%;
-  font-weight: bold;
-}
-
 .contenedor {
   background-color: var(--azul-grisaceo);
-  padding: 3vw;
+  padding: 4vw;
   margin: auto;
   text-align: justify;
   color: var(--casi-blanco);
@@ -28,6 +21,7 @@ h2 {
 .contenedor>table {
   margin: auto;
   column-gap: 1vw;
+  padding-bottom: 2vw;
 }
 
 th, td {
@@ -46,5 +40,19 @@ th, td {
   h2 {
     text-align: center;
     font-size: 5vw;
+  }
+
+  .contenedor{
+    font-size: 3vw;
+  }
+
+  table{
+    padding-bottom: 4vw;
+  }
+}
+
+@media (orientation:portrait) and (min-width: 600px){
+  .contenedor{
+    font-size: 2vw;
   }
 }

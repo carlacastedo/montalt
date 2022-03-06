@@ -37,7 +37,7 @@
   padding: 4vw;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) or (orientation:portrait)  {
   .actividad-azul, .actividad-blanca {
     flex-direction: column;
     padding:

@@ -135,13 +135,14 @@ header>label:hover {
   display: block;
 }
 
+
 .submenu>li>a {
   color: #F2F2F2;
   text-decoration: none;
   display: block;
 }
 
-.submenu>li:hover {
+.submenu>li:hover{
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -174,18 +175,31 @@ header>label:hover {
     width: 11vw;
   }
 
-  header>a>figure{
+  header>a>figure {
     width: 22%;
   }
 
-  .menu *{
+  .menu * {
     font-size: 3vw;
   }
 
   .submenu {
     width: 100%;
   }
-  .menu{
+
+  .menu {
     width: 35%;
+  }
+}
+
+@media (orientation:portrait) and (min-width: 600px) {
+  h2 {
+    text-align: center;
+    font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+    margin-bottom: 1vw;
   }
 }

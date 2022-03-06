@@ -1,18 +1,17 @@
 @import "menuCabecera.css";
 
-.mapa{
+.mapa {
   padding: 4vw;
   background-color: var(--azul-grisaceo);
   margin: auto;
 }
 
-.mapa>img{
+.mapa>img {
   margin: auto;
   width: 100%;
 }
 
-
-.tabla{
+.tabla {
   width: 100%;
   color: var(--negro);
   padding: 1vw;
@@ -20,43 +19,62 @@
   margin: 1vw auto;
 }
 
-.tabla > table{
+.tabla>table {
   width: 100%;
 }
 
-caption{
+caption {
   margin: 1vw;
   font-size: 2vw;
 }
 
-.caption2{
+.caption2 {
   border-top: 1px solid var(--negro);
   padding-top: 1vw;
 }
 
-th, td{
+th, td {
   text-align: center;
   padding: 1vw;
 }
 
 /*colores de los elementos de las tablas*/
-
-.facil{
+.facil {
   color: #4eb349;
 }
 
-.intermedio{
+.intermedio {
   color: #179fd2;
 }
 
-.dificil{
+.dificil {
   color: red;
 }
 
-.abierto{
+.abierto {
   color: green;
 }
 
-.cerrado{
+.cerrado {
   color: red;
+}
+/*para moviles*/
+@media (max-width: 600px){
+  table {
+    font-size: 2.6vw;
+  }
+  caption {
+    font-size: 3vw;
+  }
+}
+
+/*para tablets en vertical*/
+@media (orientation:portrait) and (min-width: 600px) {
+  table {
+    font-size: 2vw;
+  }
+
+  caption {
+    font-size: 3vw;
+  }
 }

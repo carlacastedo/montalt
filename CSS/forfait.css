@@ -22,7 +22,7 @@
   grid-column: 2/3;
   grid-row: 1/2;
   text-align: justify;
-  padding:4vw 4vw 4vw 2vw;
+  padding: 4vw 4vw 4vw 2vw;
 }
 
 .col1 {
@@ -31,7 +31,7 @@
   padding: 4vw 2vw 4vw 4vw;
 }
 
-.col1 h3{
+.col1 h3 {
   font-size: 120%;
 }
 
@@ -45,7 +45,7 @@
   width: 100%;
 }
 
-.tabla{
+.tabla {
   padding: 1vw 0;
 }
 
@@ -61,31 +61,53 @@ th, td {
   text-align: center;
 }
 
-@media(max-width:600px){
-  p{
-    font-size:3vw;
-  }
-
-  .contenedor{
+@media(max-width:600px) {
+  .contenedor {
     display: flex;
     flex-direction: column;
+    font-size: 3vw;
   }
 
-  .tabla{
-    font-size: 3vw;
+  .tabla {
     padding: 2vw 0;
   }
 
-  .col1{
+  .col1 {
     padding: 4vw;
   }
 
-  .info{
+  .info {
     padding: 4vw 4vw 0vw 4vw;
   }
 
-  .col1 h3{
+  .col1 h3 {
     font-size: 4vw;
+    text-align: center;
+  }
+}
+
+/*para tablets*/
+@media (orientation:portrait) and (min-width: 600px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+  }
+
+  .tabla {
+    padding: 2vw 0;
+  }
+
+  .col1 {
+    padding: 4vw;
+  }
+
+  .info {
+    padding: 4vw 4vw 0vw 4vw;
+  }
+
+  .col1 h3 {
+    font-size: 3vw;
     text-align: center;
   }
 }

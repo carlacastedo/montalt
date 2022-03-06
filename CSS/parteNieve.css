@@ -114,7 +114,6 @@
 }
 
 @media (max-width: 600px){
-
   #desglose {
     text-align: center;
     font-size: 4vw;
@@ -168,7 +167,7 @@
     white-space: pre;
   }
 
-  figure{
+  .contenedor figure{
     display: none;
   }
 
@@ -182,5 +181,76 @@
 
   .contenedor .info *{
     font-size: 4vw;
+  }
+}
+
+@media (orientation:portrait) and (min-width: 600px){
+  #desglose {
+    text-align: center;
+    font-size: 3vw;
+    color: var(--negro);
+  }
+  .circulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circulos>div {
+    display: inherit;
+    width: 25vw;
+    height: 25vw;
+    margin: 4vw;
+    transition: width 0.33s, height 0.33s;
+    font-size: 3vw;
+  }
+
+  /*ampliaciond de los circulos al pasar el raton por encima*/
+  .circulos>div:hover{
+    width: 35vw;
+    height: 35vw;
+    font-size: 0;
+  }
+
+  /*texto despues*/
+  .circulos>.verde:hover p:after{
+    content: "Ala Blanca\A El pinet\A Ronda Corta";
+    font-size: 3vw;
+    white-space: pre;
+  }
+
+  .circulos>.azul:hover .contenido:after{
+    content: "Paseo\A Rodombolo\A Vuelta a casa";
+    font-size: 3vw;
+    white-space: pre;
+  }
+
+  .circulos>.rojo:hover .contenido:after{
+    content: "Ronda larga\A Travesía I\A Mont Alt";
+    font-size: 3vw;
+    white-space: pre;
+  }
+
+  .circulos>.negro:hover .contenido:after{
+    content: "Ciervo negro";
+    font-size: 3vw;
+    white-space: pre;
+  }
+
+  .contenedor figure{
+    display: none;
+  }
+
+  .info{
+    width: auto;
+  }
+
+  .info ul{
+    padding: 0;
+  }
+
+  .contenedor .info *{
+    font-size: 3vw;
   }
 }

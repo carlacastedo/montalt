@@ -4,13 +4,6 @@ p {
   color: var(--casi-blanco);
 }
 
-h2 {
-  font-size: 2.5vw;
-  margin: auto;
-  padding: 2%;
-  font-weight: bold;
-}
-
 .contenedor {
   background-color: var(--azul-grisaceo);
   color: var(--casi-blanco);
@@ -67,4 +60,46 @@ h2 {
 
 a{
   color: inherit;
+}
+
+@media (max-width:600px){
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+    font-size: 3vw;
+  }
+
+  .varios{
+    padding-left: 4vw;
+    padding-top: 0;
+  }
+
+  .varios img{
+    width: 100%;
+  }
+
+  .varios figure{
+    padding-top: 4vw;
+  }
+}
+
+@media (orientation: portrait)and (min-width:600px){
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+  }
+
+  .varios{
+    padding-left: 4vw;
+    padding-top: 0;
+  }
+
+  .varios img{
+    width: 100%;
+  }
+
+  .varios figure{
+    padding-top: 4vw;
+  }
 }

@@ -22,13 +22,13 @@
   grid-column: 2/3;
   grid-row: 1/2;
   text-align: justify;
-  padding: 5vw 5vw 5vw 2.5vw;
+  padding:4vw 4vw 4vw 2vw;
 }
 
 .col1 {
   grid-column: 1/2;
   grid-row: 1/2;
-  padding: 5vw 2.5vw 5vw 5vw;
+  padding: 4vw 2vw 4vw 4vw;
 }
 
 .col1 h3{
@@ -59,4 +59,33 @@ th, td {
   border: solid 1px;
   padding: 0.5vw;
   text-align: center;
+}
+
+@media(max-width:600px){
+  p{
+    font-size:3vw;
+  }
+
+  .contenedor{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabla{
+    font-size: 3vw;
+    padding: 2vw 0;
+  }
+
+  .col1{
+    padding: 4vw;
+  }
+
+  .info{
+    padding: 4vw 4vw 0vw 4vw;
+  }
+
+  .col1 h3{
+    font-size: 4vw;
+    text-align: center;
+  }
 }

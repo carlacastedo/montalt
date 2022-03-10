@@ -4,7 +4,7 @@ header {
   position: relative;
   padding: 0px;
   margin: 0px;
-  background-color: #1D5273;
+  background-color: var(--azul-fuerte);
 }
 
 header>a>figure {
@@ -36,7 +36,7 @@ header>h1>a {
   padding: 0;
   margin: 0;
   font-family: 'Khula', sans-serif;
-  color: #F2F2F2;
+  color: var(--casi-blanco);
   font-size: 5vw;
   text-decoration: none;
 }
@@ -88,7 +88,7 @@ nav, .submenu, nav>ul {
 
 nav {
   position: absolute;
-  background: #1D5273;
+  background: var(--azul-fuerte);
   width: 20%;
   margin-left: -35%;
   transition: all 0.2s;
@@ -103,13 +103,13 @@ nav>ul {
 nav>ul>li {
   display: block;
   padding: 15px 20px;
-  color: #F2F2F2;
+  color: var(--casi-blanco);
   position: relative;
 }
 
 nav>ul>li>a {
   display: block;
-  color: #F2F2F2;
+  color: var(--casi-blanco);
   text-decoration: none;
 }
 
@@ -120,7 +120,7 @@ nav>ul>li:hover {
 .submenu {
   list-style: none;
   display: none;
-  background: #1D5273;
+  background: var(--azul-fuerte);
   width: 100%;
   position: absolute;
   top: 0%;
@@ -137,7 +137,7 @@ nav>ul>li:hover>ul {
 }
 
 .submenu>li>a {
-  color: #F2F2F2;
+  color: var(--casi-blanco);
   text-decoration: none;
   display: block;
 }

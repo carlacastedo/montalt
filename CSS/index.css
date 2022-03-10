@@ -29,12 +29,12 @@ header>h1 {
 
 h2 {
   font-size: 2vw;
-  color: #1F1F26;
+  color: var(--negro);
   font-weight: bold;
 }
 
 p {
-  color: #1F1F26;
+  color: var(--negro);
   margin: auto;
 }
 
@@ -62,7 +62,7 @@ nav, .submenu, nav>ul{
 }
 
 nav{
-  background: #1D5273;
+  background: var(--azul-fuerte);
 }
 
 nav>ul{
@@ -73,7 +73,7 @@ nav>ul{
 nav>ul>li{
   display: block;
   padding: 25px 20px;
-  color: #F2F2F2;
+  color: var(--casi-blanco);
   flex-grow: 1;
   text-align: center;
   position: relative;
@@ -81,7 +81,7 @@ nav>ul>li{
 
 nav>ul>li>a {
   display: block;
-  color: #F2F2F2;
+  color: var(--casi-blanco);
   text-decoration: none;
 }
 
@@ -98,7 +98,7 @@ nav>ul>li:hover>ul{
 .submenu{
   list-style: none;
   display: none;
-  background: #1D5273;
+  background: var(--azul-fuerte);
   width: 100%;
   position: absolute;
   right: 0%;
@@ -107,7 +107,7 @@ nav>ul>li:hover>ul{
 
 .submenu>li>a{
   text-decoration: none;
-  color: #F2F2F2;
+  color: var(--casi-blanco);
   display: block;
   padding: 15px 20px;
 }

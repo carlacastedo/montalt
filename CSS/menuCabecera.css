@@ -76,17 +76,17 @@ header>label:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.menu, .submenu, .menu>ul {
+nav, .submenu, nav>ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#btn-menu:checked~.menu {
+#btn-menu:checked~nav {
   margin: 0;
 }
 
-.menu {
+nav {
   position: absolute;
   background: #1D5273;
   width: 20%;
@@ -94,26 +94,26 @@ header>label:hover {
   transition: all 0.2s;
 }
 
-.menu>ul {
+nav>ul {
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 
-.menu>ul>li {
+nav>ul>li {
   display: block;
   padding: 15px 20px;
   color: #F2F2F2;
   position: relative;
 }
 
-.menu>ul>li>a {
+nav>ul>li>a {
   display: block;
   color: #F2F2F2;
   text-decoration: none;
 }
 
-.menu>ul>li:hover {
+nav>ul>li:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -131,7 +131,7 @@ header>label:hover {
   padding: 15px 20px;
 }
 
-.menu>ul>li:hover>ul {
+nav>ul>li:hover>ul {
   transition: all 0.5s;
   display: block;
 }
@@ -179,7 +179,7 @@ header>label:hover {
     width: 22%;
   }
 
-  .menu * {
+  nav * {
     font-size: 3vw;
   }
 
@@ -187,7 +187,7 @@ header>label:hover {
     width: 110%;
   }
 
-  .menu {
+  nav {
     width: 35%;
   }
 
@@ -195,11 +195,11 @@ header>label:hover {
 
 
 @media (orientation:portrait) and (min-width: 600px) {
-  .menu * {
+  nav * {
     font-size: 2vw;
   }
 
-  .menu {
+  nav {
     width: 35%;
   }
 
@@ -217,7 +217,7 @@ header>label:hover {
 
 /*para pantallas tactiles el menu esta desplegado completamente*/
 @media (pointer:coarse){
-  .menu>ul>.eliminar_sep{
+  nav>ul>.eliminar_sep{
     padding-top: 0;
   }
   .submenu {

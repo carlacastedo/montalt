@@ -28,13 +28,14 @@ header>h1 {
 }
 
 h2 {
-  font-size: 3vw;
+  font-size: 2vw;
   color: #1F1F26;
   font-weight: bold;
 }
 
 p {
   color: #1F1F26;
+  margin: auto;
 }
 
 .tirafotos {
@@ -85,7 +86,7 @@ nav>ul>li>a {
 }
 
 nav li:hover{
-  transition: all 0.5s;
+  transition: all 0.3s;
   background: rgba(0,0,0,0.3);
 }
 

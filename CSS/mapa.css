@@ -20,13 +20,10 @@
   background-color: var(--casi-blanco);
 }
 
-.tabla>table {
-  width: 100%;
-}
-
 caption {
-  margin: 1vw;
+  padding: 1vw;
   font-size: 2vw;
+  background-color: var(--casi-blanco);
 }
 
 .caption2 {
@@ -52,13 +49,6 @@ th, td {
   color: red;
 }
 
-.abierto {
-  color: green;
-}
-
-.cerrado {
-  color: red;
-}
 /*para moviles*/
 @media (max-width: 600px){
   table {

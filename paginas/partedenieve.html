@@ -54,6 +54,7 @@
     <!--Introducimos un listado de estadísticas de las pistas-->
     <div class="info">
       <ul>
+        <li><b id="fecha"></b></li>
         <li>PISTAS ABIERTAS: 10/13</li>
         <li>REMONTES ABIERTOS: 5/6</li>
         <li>KILÓMETROS ESQUIABLES: 7,04 KM</li>
@@ -105,3 +106,16 @@
 </body>
 
 </html>
+
+<!-- para actualizar la fecha de los datos de la estacion -->
+<script>
+  const meses = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
+  const dias = ["DOMINGO", "LUNES", "Martes", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO"];
+  const hoy = new Date();
+  let mes = meses[hoy.getMonth()];
+  let dia = dias[hoy.getDay()];
+  // insertamos la fecha en el elemento de la lista fecha que no contiene nada
+  document.getElementById("fecha").innerHTML = "DATOS DEL " + dia + " " + hoy.getDate() + " DE " + mes + " DE " + hoy.getFullYear();
+  //ponemos el color en oscuro
+  document.getElementById("fecha").style.color = "#1F1F26";
+</script>

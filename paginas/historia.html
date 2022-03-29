@@ -78,7 +78,7 @@
           forma menos agresiva posible. Además, para evitar la contaminación y
           debido a la concienciación de los dueños con el calentamiento global
           y el cambio climático, la estación se sostiene con energía proviniente
-           de fuentes renovables.
+          de fuentes renovables.
         </p>
         <p>Actualmente, la estación es un soporte fundamental en la economía
           de Mont Alt, que da trabajo a 120 habitantes del municipio.
@@ -110,40 +110,39 @@
     </figure>
   </footer>
 </body>
+
 </html>
 
 <script>
-//Al hacer click en la imagen1 se ejecutará la función cambiaFoto1
-let im1 = document.getElementById("imagen1");
-let flag1 = 0;
-im1.onclick = cambiaFoto1;
+  //Al hacer click en la imagen1 se ejecutará la función cambiaFoto1
+  let im1 = document.getElementById("imagen1");
+  let flag1 = 0;
+  im1.onclick = cambiaFoto1;
 
-//Al hacer click en la imagen2 se ejecutará la función cambiaFoto2
-let im2 = document.getElementById("imagen2");
-let flag2 = 0;
-im2.onclick = cambiaFoto2;
+  //Al hacer click en la imagen2 se ejecutará la función cambiaFoto2
+  let im2 = document.getElementById("imagen2");
+  let flag2 = 0;
+  im2.onclick = cambiaFoto2;
 
-//Función que cambia la imagen de imagen1
-function cambiaFoto1(evento) {
-  if(flag1==0){
-    im1.src="../fotos/historia3.jpg";
-    flag1=1;
+  //Función que cambia la imagen de imagen1
+  function cambiaFoto1(evento) {
+    if (flag1 == 0) {
+      im1.src = "../fotos/historia3.jpg";
+      flag1 = 1;
+    } else {
+      im1.src = "../fotos/historia1.jpg";
+      flag1 = 0;
+    }
   }
-  else{
-    im1.src="../fotos/historia1.jpg";
-    flag1=0;
-  }
-}
 
-//Función que cambia la imagen de imagen2
-function cambiaFoto2(evento) {
-  if(flag2==0){
-    im2.src="../fotos/historia4.jpg";
-    flag2=1;
+  //Función que cambia la imagen de imagen2
+  function cambiaFoto2(evento) {
+    if (flag2 == 0) {
+      im2.src = "../fotos/historia4.jpg";
+      flag2 = 1;
+    } else {
+      im2.src = "../fotos/historia2.jpg";
+      flag2 = 0;
+    }
   }
-  else{
-    im2.src="../fotos/historia2.jpg";
-    flag2=0;
-  }
-}
 </script>

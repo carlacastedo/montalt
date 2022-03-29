@@ -36,17 +36,26 @@
   align-items: center;
   padding: 4vw;
   background-color: var(--casi-blanco);
+
+}
+
+.actividad-blanca >*, .actividad-azul>*{
+  opacity: 0;
 }
 
 @media (max-width: 600px) or (orientation:portrait) {
   .actividad-azul, .actividad-blanca {
     flex-direction: column;
-    padding:
   }
 
-  .actividad-blanca figure, .actividad-azul figure {
+  .actividad-azul figure {
     padding-top: 2vw;
     padding-left: 0;
+  }
+
+  .actividad-blanca figure{
+    padding-top: 2vw;
+    padding-right: 0;
   }
 
   h2 {

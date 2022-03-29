@@ -10,6 +10,7 @@
   <meta name="description" content="Página principal de la estación Pirenaica de esquí Mont Alt">
   <meta name="keywords" content="Mont alt, esquiar, Pirineos, Mont Alt esqui">
   <link rel="stylesheet" href="CSS/index.css">
+  <script src="jquery-3.6.0.min.js" type="text/javascript"></script>
 </head>
 
 <!--Cuerpo de la pagina web-->
@@ -17,12 +18,16 @@
 <body>
   <!--Cabecera con el nombre de la estacion y la foto-->
   <header>
-    <h1>MONT ALT</h1>
-    <figure>
-      <img srcset="fotos/portada.JPG 700w,
-             fotos/portadaMovil.jpg 600w" sizes="(max-width: 600px),
-            (max-width: 480px)" alt="portada">
-    </figure>
+    <section id="parallax">
+      <div id="contenedor">
+        <div class="capa rellax" data-rellax-speed="-8" style='background-image: url(fotos/cielo.png)'></div>
+        <div class="capa rellax" data-rellax-speed="-5" style='background-image: url(fotos/montañas.png)'></div>
+        <div class="texto-titulo rellax" data-rellax-speed="-3">
+          <h1>MONTALT</h1>
+        </div>
+        <div class="capa" style='background-image: url(fotos/suelo.png)'></div>
+      </div>
+    </section>
   </header>
 
   <!--Panel de navegación, con todas las páginas del sitio web-->
@@ -91,5 +96,11 @@
     </figure>
   </footer>
 </body>
+
+<script src='rellax.min.js'></script>
+<script>
+  var rellax = new Rellax(".rellax");
+</script>
+
 
 </html>

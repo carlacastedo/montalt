@@ -1,32 +1,5 @@
 @import "estilos.css";
 
-header {
-  position: relative;
-  padding: 0px;
-  margin: 0px;
-  line-height: 0;
-}
-
-header>figure>img {
-  width: 100%;
-  height: auto;
-  margin: auto;
-}
-
-header>figure {
-  margin: auto;
-}
-
-header>h1 {
-  font-family: 'Khula', sans-serif;
-  color: #040A22;
-  font-size: 5vw;
-  position: absolute;
-  bottom: 20%;
-  right: 5%;
-  margin: 0px;
-}
-
 h2 {
   font-size: 2vw;
   color: var(--negro);
@@ -36,6 +9,48 @@ h2 {
 p {
   color: var(--negro);
   margin: auto;
+}
+
+#parallax {
+  width: 100%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+
+#contenedor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.texto-titulo>h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12vw;
+  color: #040A22;
+  margin: auto;
+}
+
+.texto-titulo {
+  width: 100%;
+  height: 100%;
+  opacity: .75;
 }
 
 .tirafotos {
@@ -55,22 +70,22 @@ p {
   display: inline-block;
 }
 
-nav, .submenu, nav>ul{
+nav, .submenu, nav>ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-nav{
+nav {
   background: var(--azul-fuerte);
 }
 
-nav>ul{
+nav>ul {
   list-style: none;
   display: flex;
 }
 
-nav>ul>li{
+nav>ul>li {
   display: block;
   padding: 25px 20px;
   color: var(--casi-blanco);
@@ -85,17 +100,17 @@ nav>ul>li>a {
   text-decoration: none;
 }
 
-nav li:hover{
+nav li:hover {
   transition: all 0.3s;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
-nav>ul>li:hover>ul{
+nav>ul>li:hover>ul {
   transition: all 0.5s;
   display: block;
 }
 
-.submenu{
+.submenu {
   list-style: none;
   display: none;
   background: var(--azul-fuerte);
@@ -105,7 +120,7 @@ nav>ul>li:hover>ul{
   top: 100%;
 }
 
-.submenu>li>a{
+.submenu>li>a {
   text-decoration: none;
   color: var(--casi-blanco);
   display: block;
@@ -148,19 +163,19 @@ nav>ul>li:hover>ul{
     flex-direction: column;
   }
 
-  .calendario{
+  .calendario {
     padding-left: 0;
   }
 
-  nav *{
+  nav * {
     font-size: 2.3vw;
   }
 
-  .info{
+  .info {
     font-size: 3vw;
   }
 
-  .info h2{
+  .info h2 {
     font-size: 4vw;
   }
 

@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="Mont alt actividades">
   <link rel="stylesheet" href="../CSS/actividades.css">
+  <script src="../jquery-3.6.0.min.js" type="text/javascript"></script>
 </head>
 
 <!--Cuerpo de la pagina web-->
@@ -112,5 +113,22 @@
     </figure>
   </footer>
 </body>
+
+
+<script>
+//efecto de aparcicion de la informacion al hacer scroll
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $("article>*").each( function(i){
+            let bajo_div = $(this).offset().top + $(this).outerHeight()/1.5;
+            let bajo_ventana = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            if(bajo_ventana > bajo_div){
+                $(this).animate({'opacity':'1'},600);
+            }
+        });
+    });
+});
+</script>
 
 </html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<remontes>
+	<remonte>
+		<nombre>Alt de pinet</nombre>
+		<tipo>Telesilla</tipo>
+		<plazas>4</plazas>
+		<longitud>763</longitud>
+		<desnivel>400</desnivel>
+		<tiempo>9</tiempo>
+		<estado>Abierto</estado>
+	</remonte>
+	<remonte>
+		<nombre>Mironde</nombre>
+		<tipo>Telesilla</tipo>
+		<plazas>6</plazas>
+		<longitud>1540</longitud>
+		<desnivel>807</desnivel>
+		<tiempo>11</tiempo>
+		<estado>Abierto</estado>
+	</remonte>
+	<remonte>
+		<nombre>Candans</nombre>
+		<tipo>Telesilla</tipo>
+		<plazas>2</plazas>
+		<longitud>675</longitud>
+		<desnivel>340</desnivel>
+		<tiempo>6</tiempo>
+		<estado>Cerrado</estado>
+	</remonte>
+	<remonte>
+		<nombre>Sotavent</nombre>
+		<tipo>Telesquí</tipo>
+		<plazas>-</plazas>
+		<longitud>320</longitud>
+		<desnivel>100</desnivel>
+		<tiempo>5,4</tiempo>
+		<estado>Abierto</estado>
+	</remonte>
+	<remonte>
+		<nombre>Pluges</nombre>
+		<tipo>Telesilla</tipo>
+		<plazas>4</plazas>
+		<longitud>1360</longitud>
+		<desnivel>653</desnivel>
+		<tiempo>13</tiempo>
+		<estado>Abierto</estado>
+	</remonte>
+	<remonte>
+		<nombre>Pendra</nombre>
+		<tipo>Cinta</tipo>
+		<plazas>-</plazas>
+		<longitud>70</longitud>
+		<desnivel>20</desnivel>
+		<tiempo>2</tiempo>
+		<estado>Abierta</estado>
+	</remonte>
+</remontes>

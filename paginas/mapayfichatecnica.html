@@ -60,7 +60,7 @@
 
   <section>
     <!--Tabla de pistas-->
-    <table class="tabla">
+    <table class="tabla" id="pistas">
       <!--Pie de tabla-->
       <caption>Información de pistas</caption>
       <!--Cabecera de la tabla-->
@@ -166,74 +166,10 @@
     </table>
 
     <!--Tabla de remontes-->
-    <table class="tabla">
+    <table class="tabla" id="remontes">
       <!--Pie de tabla-->
       <caption class="caption2">Información de remontes</caption>
       <!--Cabecera de la tabla-->
-      <tr>
-        <th>NOMBRE</th>
-        <th>TIPO</th>
-        <th>PLAZAS</th>
-        <th>LONGITUD (m)</th>
-        <th>DESNIVEL (m)</th>
-        <th>TIEMPO (min)</th>
-        <th>ESTADO</th>
-      </tr>
-
-      <tr>
-        <td>Alt de pinet</td>
-        <td>Telesilla</td>
-        <td>4</td>
-        <td>763</td>
-        <td>400</td>
-        <td>9</td>
-        <td>Abierto</td>
-      </tr>
-      <tr>
-        <td>Mironde</td>
-        <td>Telesilla</td>
-        <td>6</td>
-        <td>1540</td>
-        <td>807</td>
-        <td>11</td>
-        <td>Abierto</td>
-      </tr>
-      <tr>
-        <td>Candans</td>
-        <td>Telesilla</td>
-        <td>2</td>
-        <td>675</td>
-        <td>340</td>
-        <td>6</td>
-        <td>Cerrado</td>
-      </tr>
-      <tr>
-        <td>Sotavent</td>
-        <td>Telesquí</td>
-        <td>-</td>
-        <td>320</td>
-        <td>100</td>
-        <td>5,4</td>
-        <td>Abierto</td>
-      </tr>
-      <tr>
-        <td>Pluges</td>
-        <td>Telesilla</td>
-        <td>4</td>
-        <td>1360</td>
-        <td>653</td>
-        <td>13</td>
-        <td>Abierto</td>
-      </tr>
-      <tr>
-        <td>Pendra</td>
-        <td>Cinta</td>
-        <td>-</td>
-        <td>70</td>
-        <td>20</td>
-        <td>2</td>
-        <td>Abierta</td>
-      </tr>
     </table>
     <!--Fin de la sección-->
   </section>
@@ -257,6 +193,42 @@
 </html>
 
 <script>
+function cargarJSON(){
+  var datosJSON=JSON.parse(JSON.stringify("../pistas.json"));
+  
+}
+  var xhr=new XMLHttpRequest();
+  xhr.onreadystatechange=function(){
+    if(this.readyState==4 && this.status==200){
+      cargarXML(this);
+    }
+  };
+  xhr.open("GET","../remontes.xml",true);
+  xhr.send();
+  function cargarXML(xml){
+    var docXML=xml.responseXML;
+    var tabla= "<tr><th>NOMBRE</th><th>TIPO</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>TIEMPO (min)</th><th>ESTADO</th></tr>"
+    var rem=docXML.getElementsByTagName("remonte");
+    for(var i=0; i<rem.length;i++){
+      tabla += "<tr><td>";
+      tabla += rem[i].getElementsByTagName("nombre")[0].textContent;
+      tabla += "</td><td>"
+      tabla += rem[i].getElementsByTagName("tipo")[0].textContent;
+      tabla += "</td><td>"
+      tabla += rem[i].getElementsByTagName("plazas")[0].textContent;
+      tabla += "</td><td>"
+      tabla += rem[i].getElementsByTagName("longitud")[0].textContent;
+      tabla += "</td><td>"
+      tabla += rem[i].getElementsByTagName("desnivel")[0].textContent;
+      tabla += "</td><td>"
+      tabla += rem[i].getElementsByTagName("tiempo")[0].textContent;
+      tabla += "</td><td>"
+      tabla += rem[i].getElementsByTagName("estado")[0].textContent;
+      tabla += "</td></tr>"
+    }
+    document.getElementById("remontes").innerHTML=tabla;
+  };
+
   var tablas = document.getElementsByClassName('tabla');
   for (var i = 1, fila; fila = tablas.item(0).rows[i]; i++) {
     if (fila.cells[4].innerText == 'Abierta') {

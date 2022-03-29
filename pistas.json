@@ -1,0 +1,15 @@
+{"pistas" : [
+	{"nombre" : "Ala blanca", "dificultad" : "Fácil", "longitud" : "101", "desnivel" : "21", "estado" : "Abierta"},
+	{"nombre" : "El pinet", "dificultad" : "Fácil", "longitud" : "156", "desnivel" : "75", "estado" : "Abierta"},
+	{"nombre" : "Ronda corta", "dificultad" : "Fácil", "longitud" : "331", "desnivel" : "129", "estado" : "Abierta"},
+	{"nombre" : "Cara nord", "dificultad" : "Intermedia", "longitud" : "760", "desnivel" : "235", "estado" : "Cerrada"},
+	{"nombre" : "Paseo", "dificultad" : "Intermedia", "longitud" : "763", "desnivel" : "372", "estado" : "Abierta"},
+	{"nombre" : "Rodombolo", "dificultad" : "Intermedia", "longitud" : "800", "desnivel" : "274", "estado" : "Abierta"},
+	{"nombre" : "Vuelta a clase", "dificultad" : "Intermedia", "longitud" : "1200", "desnivel" : "163", "estado" : "Abierta"},
+	{"nombre" : "Ronda larga", "dificultad" : "Difícil", "longitud" : "1263", "desnivel" : "604", "estado" : "Abierta"},
+	{"nombre" : "Travesía I", "dificultad" : "Difícil", "longitud" : "854", "desnivel" : "670", "estado" : "Abierta"},
+	{"nombre" : "Travesía II", "dificultad" : "Difícil", "longitud" : "729", "desnivel" : "654", "estado" : "Cerrada"},
+	{"nombre" : "Mont Alt", "dificultad" : "Difícil", "longitud" : "783", "desnivel" : "286", "estado" : "Abierta"},
+	{"nombre" : "Ciervo negro", "dificultad" : "Muy difícil", "longitud" : "797", "desnivel" : "533", "estado" : "Abierta"},
+	{"nombre" : "Espetalonga", "dificultad" : "Muy difícil", "longitud" : "563", "desnivel" : "332", "estado" : "Cerrada"}
+]}

@@ -93,6 +93,7 @@
 </html>
 
 <script>
+<<<<<<< HEAD
   fetch("../pistas.json").then(ajaxOK);
   function ajaxOK(response){
     response.json().then(muestraTexto);
@@ -113,8 +114,26 @@
       tabla += "</td></tr>"
       document.getElementById("pistas").innerHTML=tabla;
     }
+=======
+    var xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange=function(){
+      if(this.readyState==4&&this.status==200){
+        var jsonObj=JSON.parse(this.responseText);
+        var tabla="<tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>";
+        for (x in jsonObj.pistas){
+          tabla+="<tr><td>"+jsonObj.pistas.nombre+"</td>";
+          tabla+="<td>"+jsonObj.pistas.dificultad+"</td>";
+          tabla+="<td>"+jsonObj.pistas.longitud+"</td>";
+          tabla+="<td>"+jsonObj.pistas.desnivel+"</td>";
+          tabla+="<td>"+jsonObj.pistas.estado+"</td></tr>";
+        }
+        document.getElementById("pistas").innerHTML=tabla;
+        colorEstado();
+      };
+      xhttp.open("GET","../pistas.json",true);
+      xhttp.send();
+>>>>>>> fa407db43930796e0529da9d6da480b83f348bf1
 
-  }
   var xhr=new XMLHttpRequest();
   xhr.onreadystatechange=function(){
     if(this.readyState==4 && this.status==200){
@@ -145,6 +164,10 @@
       tabla += rem[i].getElementsByTagName("estado")[0].textContent;
       tabla += "</td></tr>"
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa407db43930796e0529da9d6da480b83f348bf1
     document.getElementById("remontes").innerHTML=tabla;
     colorEstado();
   };

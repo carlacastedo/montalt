@@ -71,14 +71,58 @@
         <img src="fotos/calendario.png" alt="calendario de la temporada">
       </figure>
     </article>
+
     <!--Tira de fotos-->
-    <figure class="tirafotos">
-      <img src="fotos/tiraFotos1.JPG" alt="Foto MontAlt exposición">
-      <img src="fotos/tiraFotos2.jpg" alt="Foto MontAlt exposición">
-      <img src="fotos/tiraFotos3.jpg" alt="Foto MontAlt exposición">
-      <img src="fotos/tiraFotos4.jpg" alt="Foto MontAlt exposición">
-      <img src="fotos/tiraFotos5.jpg" alt="Foto MontAlt exposición">
-    </figure>
+    <div class="container">
+      <figure class="foto">
+        <img src="fotos/tiraFotos1.JPG">
+      </figure>
+
+      <figure class="foto">
+        <img src="fotos/tiraFotos2.jpg">
+      </figure>
+
+      <figure class="foto">
+        <img src="fotos/tiraFotos3.jpg">
+      </figure>
+
+      <figure class="foto">
+        <img src="fotos/tiraFotos4.jpg">
+      </figure>
+
+      <figure class="foto">
+        <img src="fotos/tiraFotos5.jpg">
+      </figure>
+      <figure class="foto">
+        <img src="fotos/tiraFotos6.JPG">
+      </figure>
+
+      <a class="prev" onclick="modificar(-1)">❮</a>
+      <a class="next" onclick="modificar(1)">❯</a>
+    </div>
+
+    <div class="container" id="prev">
+      <div class="previsualizacion">
+        <figure >
+          <img class="demo cursor" src="fotos/tiraFotos1.JPG" style="width:100%" onclick="establecerActual(1)">
+        </figure>
+        <figure >
+          <img class="demo cursor" src="fotos/tiraFotos2.jpg" style="width:100%" onclick="establecerActual(2)">
+        </figure>
+        <figure >
+          <img class="demo cursor" src="fotos/tiraFotos3.jpg" style="width:100%" onclick="establecerActual(3)">
+        </figure>
+        <figure >
+          <img class="demo cursor" src="fotos/tiraFotos4.jpg" style="width:100%" onclick="establecerActual(4)">
+        </figure>
+        <figure>
+          <img class="demo cursor" src="fotos/tiraFotos5.jpg" style="width:100%" onclick="establecerActual(5)">
+        </figure>
+        <figure>
+          <img class="demo cursor" src="fotos/tiraFotos6.JPG" style="width:100%" onclick="establecerActual(6)">
+        </figure>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -98,8 +142,39 @@
 </body>
 
 <script src='rellax.min.js'></script>
+
 <script>
   var rellax = new Rellax(".rellax");
+  let activa = 1;
+  mostrar(activa);
+
+  function modificar(n) {
+    mostrar(activa += n);
+  }
+
+  function establecerActual(n) {
+    mostrar(activa = n);
+  }
+
+  function mostrar(n) {
+    let i;
+    let fotos = document.getElementsByClassName("foto");
+    let prev = document.getElementsByClassName("demo");
+    if (n > fotos.length) {
+      activa = 1
+    }
+    if (n < 1) {
+      activa = fotos.length
+    }
+    for (i = 0; i < fotos.length; i++) {
+      fotos[i].style.display = "none";
+    }
+    for (i = 0; i < prev.length; i++) {
+      prev[i].className = prev[i].className.replace(" active", "");
+    }
+    fotos[activa - 1].style.display = "block";
+    prev[activa - 1].className += " active";
+  }
 </script>
 
 

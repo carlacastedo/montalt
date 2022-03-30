@@ -13,7 +13,7 @@ p {
 
 #parallax {
   width: 100%;
-  height: 30vw;
+  height: 48vw;
   position: relative;
   overflow: hidden;
 }
@@ -39,7 +39,7 @@ p {
 
 .texto-titulo>h1 {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 12vw;
@@ -51,23 +51,6 @@ p {
   width: 100%;
   height: 100%;
   opacity: .75;
-}
-
-.tirafotos {
-  background-color: var(--azul-fuerte);
-  width: 100%;
-  height: auto;
-  margin: auto;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.tirafotos>img {
-  padding: 5px;
-  position: relative;
-  width: auto;
-  height: 200px;
-  display: inline-block;
 }
 
 nav, .submenu, nav>ul {
@@ -158,6 +141,97 @@ nav>ul>li:hover>ul {
   width: 100%;
 }
 
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  padding: 4vw;
+  background-color: var(--azul-fuerte);
+  width: 100%;
+  height: 30%;
+  box-sizing: border-box;
+}
+
+#prev {
+  padding-top: 0;
+}
+
+/* Hide the images by default */
+.foto {
+  display: none;
+  height: 30vw;
+  margin: auto;
+  text-align: center;
+}
+
+.foto>img {
+  vertical-align: middle;
+  height: 100%;
+  width: auto;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/*botones para ver las fotos*/
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 1vw;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 2.5vw;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* posiciones de los botones */
+.next {
+  right: 17vw;
+}
+
+.prev {
+  left: 17vw;
+}
+
+.previsualizacion {
+  display: flex;
+}
+
+/* al hacer hover poner en blanco claro */
+.prev:hover,
+.next:hover {
+  background-color: var(--azul-grisaceo);
+}
+
+.previsualizacion:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.previsualizacion>figure {
+  width: 100%;
+  margin: auto;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
 @media (max-width: 600px) {
   .cuerpo {
     flex-direction: column;
@@ -184,5 +258,23 @@ nav>ul>li:hover>ul {
     position: absolute;
     bottom: 20%;
     right: 5%;
+  }
+
+  .foto {
+    width: 100%;
+    height: auto;
+  }
+
+  .foto>img {
+    width: 100%;
+  }
+
+  /* posiciones de los botones */
+  .next {
+    right: 5vw;
+  }
+
+  .prev {
+    left: 5vw;
   }
 }

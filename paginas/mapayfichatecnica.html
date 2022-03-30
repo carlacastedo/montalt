@@ -93,28 +93,6 @@
 </html>
 
 <script>
-<<<<<<< HEAD
-  fetch("../pistas.json").then(ajaxOK);
-  function ajaxOK(response){
-    response.json().then(muestraTexto);
-  }
-  function muestraTexto(jsonObj){
-    let tabla='<tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>';
-    for(var i=0; i<jsonObj.length;i++){
-      tabla += "<tr><td>";
-      tabla += jsonObj.nombre;
-      tabla += "</td><td>"
-      tabla += jsonObj.dificultad;
-      tabla += "</td><td>"
-      tabla += jsonObj.longitud;
-      tabla += "</td><td>"
-      tabla += jsonObj.desnivel;
-      tabla += "</td><td>"
-      tabla += jsonObj.estado;
-      tabla += "</td></tr>"
-      document.getElementById("pistas").innerHTML=tabla;
-    }
-=======
     var xhttp=new XMLHttpRequest();
     xhttp.onreadystatechange=function(){
       if(this.readyState==4&&this.status==200){
@@ -132,7 +110,6 @@
       };
       xhttp.open("GET","../pistas.json",true);
       xhttp.send();
->>>>>>> fa407db43930796e0529da9d6da480b83f348bf1
 
   var xhr=new XMLHttpRequest();
   xhr.onreadystatechange=function(){
@@ -164,10 +141,7 @@
       tabla += rem[i].getElementsByTagName("estado")[0].textContent;
       tabla += "</td></tr>"
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> fa407db43930796e0529da9d6da480b83f348bf1
     document.getElementById("remontes").innerHTML=tabla;
     colorEstado();
   };

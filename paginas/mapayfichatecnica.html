@@ -63,106 +63,6 @@
     <table class="tabla" id="pistas">
       <!--Pie de tabla-->
       <caption>Información de pistas</caption>
-      <!--Cabecera de la tabla-->
-      <tr>
-        <th>NOMBRE</th>
-        <th>DIFICULTAD</th>
-        <th>LONGITUD (m)</th>
-        <th>DESNIVEL (m)</th>
-        <th>ESTADO</th>
-      </tr>
-      <tr>
-        <td>Ala blanca</td>
-        <td>Fácil <span class="facil"> &nbsp;&#9679;</span></td>
-        <td>101</td>
-        <td>21</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>El pinet</td>
-        <td>Fácil <span class="facil"> &nbsp;&#9679;</span></td>
-        <td>156</td>
-        <td>75</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>Ronda corta</td>
-        <td>Fácil<span class="facil"> &nbsp;&#9679;</td>
-        <td>331</td>
-        <td>129</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>Cara nord</td>
-        <td>Intermedia<span class="intermedio"> &nbsp;&#9632;</span></td>
-        <td>760</td>
-        <td>235</td>
-        <td>Cerrada</td>
-      </tr>
-      <tr>
-        <td>Paseo</td>
-        <td>Intermedia<span class="intermedio"> &nbsp;&#9632;</span></td>
-        <td>763</td>
-        <td>372</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>Rodombolo</td>
-        <td>Intermedia<span class="intermedio"> &nbsp;&#9632;</span></td>
-        <td>800</td>
-        <td>274</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>Vuelta a casa</td>
-        <td>Intermedia<span class="intermedio"> &nbsp;&#9632;</span></td>
-        <td>1200</td>
-        <td>163</td>
-        <td>Abierta</td>
-      </tr>
-
-      <tr>
-        <td>Ronda larga</td>
-        <td>Difícil<span class="dificil"> &nbsp;&#9830;</span></td>
-        <td>1263</td>
-        <td>604</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>Travesía I</td>
-        <td>Difícil<span class="dificil"> &nbsp;&#9830;</span></td>
-        <td>854</td>
-        <td>670</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>Travesía II</td>
-        <td>Difícil<span class="dificil"> &nbsp;&#9830;</span></td>
-        <td>729</td>
-        <td>654</td>
-        <td>Cerrada</td>
-      </tr>
-      <tr>
-        <td>Mont Alt</td>
-        <td>Difícil<span class="dificil"> &nbsp;&#9830;</span></td>
-        <td>783</td>
-        <td>286</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>Ciervo negro</td>
-        <td>Muy difícil &nbsp;&#9830;&#9830;</td>
-        <td>797</td>
-        <td>533</td>
-        <td>Abierta</td>
-      </tr>
-      <tr>
-        <td>Espetalonga</td>
-        <td>Muy difícil &nbsp;&#9830;&#9830;</td>
-        <td>563</td>
-        <td>332</td>
-        <td>Cerrada</td>
-      </tr>
     </table>
 
     <!--Tabla de remontes-->
@@ -193,10 +93,28 @@
 </html>
 
 <script>
-function cargarJSON(){
-  var datosJSON=JSON.parse(JSON.stringify("../pistas.json"));
-  
-}
+  fetch('../pistas.json').then(ajaxOK);
+  function ajaxOK(response){
+    response.json().then(muestraTexto);
+  }
+  function muestraTexto(jsonObj){
+    let tabla='<tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>';
+    for(var i=0; i<jsonObj.length;i++){
+      tabla += "<tr><td>";
+      tabla += jsonObj.nombre;
+      tabla += "</td><td>"
+      tabla += jsonObj.dificultad;
+      tabla += "</td><td>"
+      tabla += jsonObj.longitud;
+      tabla += "</td><td>"
+      tabla += jsonObj.desnivel;
+      tabla += "</td><td>"
+      tabla += jsonObj.estado;
+      tabla += "</td></tr>"
+      document.getElementById("remontes").innerHTML=tabla;
+    }
+
+  }
   var xhr=new XMLHttpRequest();
   xhr.onreadystatechange=function(){
     if(this.readyState==4 && this.status==200){
@@ -227,8 +145,10 @@ function cargarJSON(){
       tabla += "</td></tr>"
     }
     document.getElementById("remontes").innerHTML=tabla;
+    colorEstado();
   };
 
+  function colorEstado(){
   var tablas = document.getElementsByClassName('tabla');
   for (var i = 1, fila; fila = tablas.item(0).rows[i]; i++) {
     if (fila.cells[4].innerText == 'Abierta') {
@@ -245,4 +165,5 @@ function cargarJSON(){
       fila.cells[6].style.color = "red";
     }
   }
+}
 </script>

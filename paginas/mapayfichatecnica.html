@@ -88,27 +88,42 @@
 </html>
 
 <script>
-    var xhttp=new XMLHttpRequest();
-    xhttp.onreadystatechange=function(){
-      if(this.readyState==4&&this.status==200){
-        var jsonObj=JSON.parse(this.responseText);
-        var tabla="<caption>Información de pistas</caption><tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>";
-        for (x in jsonObj.pistas){
-          tabla+="<tr><td>"+jsonObj.pistas[x].nombre+"</td>";
-          tabla+="<td>"+jsonObj.pistas[x].dificultad+"</td>";
-          tabla+="<td>"+jsonObj.pistas[x].longitud+"</td>";
-          tabla+="<td>"+jsonObj.pistas[x].desnivel+"</td>";
-          tabla+="<td>"+jsonObj.pistas[x].estado+"</td></tr>";
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var jsonObj = JSON.parse(this.responseText);
+      var tabla = "<caption>Información de pistas</caption><tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>";
+      let dificultad;
+      for (x in jsonObj.pistas) {
+        tabla += "<tr><td>" + jsonObj.pistas[x].nombre + "</td>";
+        switch (jsonObj.pistas[x].dificultad) {
+          case "Fácil":
+            dificultad = "<span class=\"facil\">&nbsp;&#9679;</span>";
+            break;
+          case "Intermedia":
+            dificultad = "<span class=\"intermedio\">&nbsp;&#9632;</span>";
+            break;
+          case "Difícil":
+            dificultad = "<span class=\"dificil\">&nbsp;&#9830;</span>";
+            break;
+          case "Muy difícil":
+            dificultad = "&nbsp;&#9830;&#9830;";
+            break;
         }
-        document.getElementById("pistas").innerHTML=tabla;
-        colorEstado();
+        tabla += "<td>" + jsonObj.pistas[x].dificultad + dificultad + "</td>";
+        tabla += "<td>" + jsonObj.pistas[x].longitud + "</td>";
+        tabla += "<td>" + jsonObj.pistas[x].desnivel + "</td>";
+        tabla += "<td>" + jsonObj.pistas[x].estado + "</td></tr>";
       }
-}
-xhttp.open("GET","../pistas.json",true);
-xhttp.send();
-  var xhr=new XMLHttpRequest();
-  xhr.onreadystatechange=function(){
-    if(this.readyState==4 && this.status==200){
+      document.getElementById("pistas").innerHTML = tabla;
+      colorEstado();
+    }
+  }
+  xhttp.open("GET", "../pistas.json", true);
+  xhttp.send();
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
       cargarXML(this);
     }
   }
@@ -137,26 +152,27 @@ xhttp.send();
       tabla += "</td></tr>"
     }
 
-    document.getElementById("remontes").innerHTML=tabla;
+    document.getElementById("remontes").innerHTML = tabla;
     colorEstado();
   };
 
-  function colorEstado(){
-  var tablas = document.getElementsByClassName('tabla');
-  for (var i = 1, fila; fila = tablas.item(0).rows[i]; i++) {
-    if (fila.cells[4].innerText == 'Abierta') {
-      fila.cells[4].style.color = "green";
-    } else {
-      fila.cells[4].style.color = "red";
+  //funcion para establecer el formato de las celdas con abierto y cerrado
+  function colorEstado() {
+    var tablas = document.getElementsByClassName('tabla');
+    for (var i = 1, fila; fila = tablas.item(0).rows[i]; i++) {
+      if (fila.cells[4].innerText == 'Abierta') {
+        fila.cells[4].style.color = "green";
+      } else {
+        fila.cells[4].style.color = "red";
+      }
     }
-  }
 
-  for (var i = 1, fila; fila = tablas.item(1).rows[i]; i++) {
-    if (fila.cells[6].innerText == 'Abierto' || fila.cells[6].innerText == 'Abierta') {
-      fila.cells[6].style.color = "green";
-    } else {
-      fila.cells[6].style.color = "red";
+    for (var i = 1, fila; fila = tablas.item(1).rows[i]; i++) {
+      if (fila.cells[6].innerText == 'Abierto' || fila.cells[6].innerText == 'Abierta') {
+        fila.cells[6].style.color = "green";
+      } else {
+        fila.cells[6].style.color = "red";
+      }
     }
   }
-}
 </script>

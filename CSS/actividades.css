@@ -39,7 +39,7 @@
 
 }
 
-.actividad-blanca >*, .actividad-azul>*{
+#aparecer>*{
   opacity: 0;
 }
 

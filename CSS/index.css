@@ -132,7 +132,7 @@ nav>ul>li:hover>ul {
 
 .calendario {
   margin: auto;
-  width: auto;
+  width: 105vw;
   padding-left: 4vw;
 }
 
@@ -168,15 +168,9 @@ nav>ul>li:hover>ul {
   height: 100%;
   width: auto;
 }
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
 /*botones para ver las fotos*/
-.prev,
-.next {
+.anterior,
+.siguiente {
   cursor: pointer;
   position: absolute;
   top: 45%;
@@ -192,11 +186,11 @@ nav>ul>li:hover>ul {
 }
 
 /* posiciones de los botones */
-.next {
+.siguiente {
   right: 17vw;
 }
 
-.prev {
+.anterior {
   left: 17vw;
 }
 
@@ -205,8 +199,8 @@ nav>ul>li:hover>ul {
 }
 
 /* al hacer hover poner en blanco claro */
-.prev:hover,
-.next:hover {
+.anterior:hover,
+.siguiente:hover {
   background-color: var(--azul-grisaceo);
 }
 
@@ -216,15 +210,14 @@ nav>ul>li:hover>ul {
   clear: both;
 }
 
-/* Six columns side by side */
 .previsualizacion>figure {
   width: 100%;
   margin: auto;
 }
 
-/* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .active,
@@ -269,12 +262,17 @@ nav>ul>li:hover>ul {
     width: 100%;
   }
 
+  .calendario {
+    padding-top: 4vw;
+    width: auto;
+  }
+
   /* posiciones de los botones */
-  .next {
+  .siguiente {
     right: 5vw;
   }
 
-  .prev {
+  .anterior {
     left: 5vw;
   }
 }

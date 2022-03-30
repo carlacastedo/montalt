@@ -66,7 +66,7 @@
       </figure>
     </article>
     <!--segunda actividad-->
-    <article class="actividad-blanca">
+    <article class="actividad-blanca" id="aparecer">
       <div class="texto">
         <h3>PARQUE INFANTIL</h3>
         <p>Para los más pequeños contamos con un parque infantil completamente equipado,
@@ -81,7 +81,7 @@
       </figure>
     </article>
     <!--tercera actividad-->
-    <article class="actividad-azul">
+    <article class="actividad-azul" id="aparecer">
       <div class="texto">
         <h3>ESQUÍ NOCTURNO</h3>
         <p>Para los amantes del esquí más sibaritas abiertos a nuevas experiencias
@@ -116,19 +116,22 @@
 
 
 <script>
-//efecto de aparcicion de la informacion al hacer scroll
-$(document).ready(function() {
-    $(window).scroll( function(){
-        $("article>*").each( function(i){
-            let bajo_div = $(this).offset().top + $(this).outerHeight()/1.5;
-            let bajo_ventana = $(window).scrollTop() + $(window).height();
-            /* If the object is completely visible in the window, fade it it */
-            if(bajo_ventana > bajo_div){
-                $(this).animate({'opacity':'1'},600);
-            }
-        });
+  //efecto de aparcicion de la informacion al hacer scroll
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      $("#aparecer>*").each(function(i) {
+        //cuando se muestren 2/3 del contenido aparecera
+        let bajo_div = $(this).offset().top + $(this).outerHeight() / 1.5;
+        let bajo_ventana = $(window).scrollTop() + $(window).height();
+        //aparece
+        if (bajo_ventana > bajo_div) {
+          $(this).animate({
+            'opacity': '1'
+          }, 500);
+        }
+      });
     });
-});
+  });
 </script>
 
 </html>

@@ -88,7 +88,9 @@
 </html>
 
 <script>
+  //cargamos las pistas en la tabla
   var xhttp = new XMLHttpRequest();
+  //USO DE JSON
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var jsonObj = JSON.parse(this.responseText);
@@ -116,11 +118,14 @@
         tabla += "<td>" + jsonObj.pistas[x].estado + "</td></tr>";
       }
       document.getElementById("pistas").innerHTML = tabla;
+      //establecemos el color condicional
       colorEstado();
     }
   }
   xhttp.open("GET", "../pistas.json", true);
   xhttp.send();
+
+  //USO DE XML
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -130,6 +135,7 @@
   xhr.open("GET", "../remontes.xml", true);
   xhr.send();
 
+//cargamos los remontes
   function cargarXML(xml) {
     var docXML = xml.responseXML;
     var tabla = "<caption>Información de remontes</caption><tr><th>NOMBRE</th><th>TIPO</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>TIEMPO (min)</th><th>ESTADO</th></tr>";
@@ -159,6 +165,7 @@
   //funcion para establecer el formato de las celdas con abierto y cerrado
   function colorEstado() {
     var tablas = document.getElementsByClassName('tabla');
+    //para pistas
     for (var i = 1, fila; fila = tablas.item(0).rows[i]; i++) {
       if (fila.cells[4].innerText == 'Abierta') {
         fila.cells[4].style.color = "green";
@@ -166,7 +173,7 @@
         fila.cells[4].style.color = "red";
       }
     }
-
+    //para remontes
     for (var i = 1, fila; fila = tablas.item(1).rows[i]; i++) {
       if (fila.cells[6].innerText == 'Abierto' || fila.cells[6].innerText == 'Abierta') {
         fila.cells[6].style.color = "green";

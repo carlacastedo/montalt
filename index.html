@@ -96,30 +96,30 @@
       <figure class="foto">
         <img src="fotos/tiraFotos6.JPG">
       </figure>
-
-      <a class="prev" onclick="modificar(-1)">❮</a>
-      <a class="next" onclick="modificar(1)">❯</a>
+      <!-- botones para pasar las fotos -->
+      <a class="anterior" onclick="modificar(-1)">❮</a>
+      <a class="siguiente" onclick="modificar(1)">❯</a>
     </div>
 
     <div class="container" id="prev">
       <div class="previsualizacion">
-        <figure >
-          <img class="demo cursor" src="fotos/tiraFotos1.JPG" style="width:100%" onclick="establecerActual(1)">
-        </figure>
-        <figure >
-          <img class="demo cursor" src="fotos/tiraFotos2.jpg" style="width:100%" onclick="establecerActual(2)">
-        </figure>
-        <figure >
-          <img class="demo cursor" src="fotos/tiraFotos3.jpg" style="width:100%" onclick="establecerActual(3)">
-        </figure>
-        <figure >
-          <img class="demo cursor" src="fotos/tiraFotos4.jpg" style="width:100%" onclick="establecerActual(4)">
+        <figure>
+          <img class="demo " src="fotos/tiraFotos1.JPG" style="width:100%" onclick="establecerActual(1)">
         </figure>
         <figure>
-          <img class="demo cursor" src="fotos/tiraFotos5.jpg" style="width:100%" onclick="establecerActual(5)">
+          <img class="demo " src="fotos/tiraFotos2.jpg" style="width:100%" onclick="establecerActual(2)">
         </figure>
         <figure>
-          <img class="demo cursor" src="fotos/tiraFotos6.JPG" style="width:100%" onclick="establecerActual(6)">
+          <img class="demo " src="fotos/tiraFotos3.jpg" style="width:100%" onclick="establecerActual(3)">
+        </figure>
+        <figure>
+          <img class="demo" src="fotos/tiraFotos4.jpg" style="width:100%" onclick="establecerActual(4)">
+        </figure>
+        <figure>
+          <img class="demo " src="fotos/tiraFotos5.jpg" style="width:100%" onclick="establecerActual(5)">
+        </figure>
+        <figure>
+          <img class="demo " src="fotos/tiraFotos6.JPG" style="width:100%" onclick="establecerActual(6)">
         </figure>
       </div>
     </div>
@@ -141,10 +141,13 @@
   </footer>
 </body>
 
+<!-- script de internet para darle el formato de profundidad a l -->
 <script src='rellax.min.js'></script>
 
 <script>
+  //nuevo objeto para crear el efecto de la profundidad en las fotos
   var rellax = new Rellax(".rellax");
+  //muestra la foto activa por defecto
   let activa = 1;
   mostrar(activa);
 
@@ -156,6 +159,7 @@
     mostrar(activa = n);
   }
 
+  //hace visible la foto con el indice n
   function mostrar(n) {
     let i;
     let fotos = document.getElementsByClassName("foto");

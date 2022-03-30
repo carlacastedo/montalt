@@ -61,15 +61,10 @@
   <section>
     <!--Tabla de pistas-->
     <table class="tabla" id="pistas">
-      <!--Pie de tabla-->
-      <caption>Información de pistas</caption>
     </table>
 
     <!--Tabla de remontes-->
     <table class="tabla" id="remontes">
-      <!--Pie de tabla-->
-      <caption class="caption2">Información de remontes</caption>
-      <!--Cabecera de la tabla-->
     </table>
     <!--Fin de la sección-->
   </section>
@@ -97,20 +92,20 @@
     xhttp.onreadystatechange=function(){
       if(this.readyState==4&&this.status==200){
         var jsonObj=JSON.parse(this.responseText);
-        var tabla="<tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>";
+        var tabla="<caption>Información de pistas</caption><tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>";
         for (x in jsonObj.pistas){
-          tabla+="<tr><td>"+jsonObj.pistas.nombre+"</td>";
-          tabla+="<td>"+jsonObj.pistas.dificultad+"</td>";
-          tabla+="<td>"+jsonObj.pistas.longitud+"</td>";
-          tabla+="<td>"+jsonObj.pistas.desnivel+"</td>";
-          tabla+="<td>"+jsonObj.pistas.estado+"</td></tr>";
+          tabla+="<tr><td>"+jsonObj.pistas[x].nombre+"</td>";
+          tabla+="<td>"+jsonObj.pistas[x].dificultad+"</td>";
+          tabla+="<td>"+jsonObj.pistas[x].longitud+"</td>";
+          tabla+="<td>"+jsonObj.pistas[x].desnivel+"</td>";
+          tabla+="<td>"+jsonObj.pistas[x].estado+"</td></tr>";
         }
         document.getElementById("pistas").innerHTML=tabla;
         colorEstado();
-      };
-      xhttp.open("GET","../pistas.json",true);
-      xhttp.send();
-
+      }
+}
+xhttp.open("GET","../pistas.json",true);
+xhttp.send();
   var xhr=new XMLHttpRequest();
   xhr.onreadystatechange=function(){
     if(this.readyState==4 && this.status==200){
@@ -122,7 +117,7 @@
 
   function cargarXML(xml) {
     var docXML = xml.responseXML;
-    var tabla = "<tr><th>NOMBRE</th><th>TIPO</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>TIEMPO (min)</th><th>ESTADO</th></tr>"
+    var tabla = "<caption>Información de remontes</caption><tr><th>NOMBRE</th><th>TIPO</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>TIEMPO (min)</th><th>ESTADO</th></tr>";
     var rem = docXML.getElementsByTagName("remonte");
     for (var i = 0; i < rem.length; i++) {
       tabla += "<tr><td>";

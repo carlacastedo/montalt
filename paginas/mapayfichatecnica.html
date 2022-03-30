@@ -93,28 +93,23 @@
 </html>
 
 <script>
-  fetch('../pistas.json').then(ajaxOK);
-  function ajaxOK(response){
-    response.json().then(muestraTexto);
-  }
-  function muestraTexto(jsonObj){
-    let tabla='<tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>';
-    for(var i=0; i<jsonObj.length;i++){
-      tabla += "<tr><td>";
-      tabla += jsonObj.nombre;
-      tabla += "</td><td>"
-      tabla += jsonObj.dificultad;
-      tabla += "</td><td>"
-      tabla += jsonObj.longitud;
-      tabla += "</td><td>"
-      tabla += jsonObj.desnivel;
-      tabla += "</td><td>"
-      tabla += jsonObj.estado;
-      tabla += "</td></tr>"
-      document.getElementById("remontes").innerHTML=tabla;
+    var xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange=function(){
+      if(this.readyState==4&&this.status==200){
+        var jsonObj=JSON.parse(this.responseText);
+        var tabla="<tr><th>NOMBRE</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>ESTADO</th></tr>";
+        for (x in jsonObj.pistas){
+          tabla+="<tr><td>"+jsonObj.pistas.nombre+"</td>";
+          tabla+="<td>"+jsonObj.pistas.dificultad+"</td>";
+          tabla+="<td>"+jsonObj.pistas.longitud+"</td>";
+          tabla+="<td>"+jsonObj.pistas.desnivel+"</td>";
+          tabla+="<td>"+jsonObj.pistas.estado+"</td></tr>";
+        }
+        document.getElementById("pistas").innerHTML=tabla;
+      };
+      xhttp.open("GET","../pistas.json",true);
+      xhttp.send();
     }
-
-  }
   var xhr=new XMLHttpRequest();
   xhr.onreadystatechange=function(){
     if(this.readyState==4 && this.status==200){

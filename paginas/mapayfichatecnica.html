@@ -106,6 +106,7 @@
           tabla+="<td>"+jsonObj.pistas.estado+"</td></tr>";
         }
         document.getElementById("pistas").innerHTML=tabla;
+        colorEstado();
       };
       xhttp.open("GET","../pistas.json",true);
       xhttp.send();

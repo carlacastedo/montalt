@@ -193,23 +193,23 @@
 </html>
 
 <script>
-function cargarJSON(){
-  var datosJSON=JSON.parse(JSON.stringify("../pistas.json"));
-  
-}
-  var xhr=new XMLHttpRequest();
-  xhr.onreadystatechange=function(){
-    if(this.readyState==4 && this.status==200){
+  function cargarJSON() {
+    var datosJSON = JSON.parse(JSON.stringify("../pistas.json"));
+  }
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
       cargarXML(this);
     }
-  };
-  xhr.open("GET","../remontes.xml",true);
+  }
+  xhr.open("GET", "../remontes.xml", true);
   xhr.send();
-  function cargarXML(xml){
-    var docXML=xml.responseXML;
-    var tabla= "<tr><th>NOMBRE</th><th>TIPO</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>TIEMPO (min)</th><th>ESTADO</th></tr>"
-    var rem=docXML.getElementsByTagName("remonte");
-    for(var i=0; i<rem.length;i++){
+
+  function cargarXML(xml) {
+    var docXML = xml.responseXML;
+    var tabla = "<tr><th>NOMBRE</th><th>TIPO</th><th>DIFICULTAD</th><th>LONGITUD (m)</th><th>DESNIVEL (m)</th><th>TIEMPO (min)</th><th>ESTADO</th></tr>"
+    var rem = docXML.getElementsByTagName("remonte");
+    for (var i = 0; i < rem.length; i++) {
       tabla += "<tr><td>";
       tabla += rem[i].getElementsByTagName("nombre")[0].textContent;
       tabla += "</td><td>"
@@ -226,7 +226,7 @@ function cargarJSON(){
       tabla += rem[i].getElementsByTagName("estado")[0].textContent;
       tabla += "</td></tr>"
     }
-    document.getElementById("remontes").innerHTML=tabla;
+    document.getElementById("remontes").innerHTML = tabla;
   };
 
   var tablas = document.getElementsByClassName('tabla');

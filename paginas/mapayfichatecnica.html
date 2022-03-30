@@ -93,15 +93,7 @@
 </html>
 
 <script>
-<<<<<<< HEAD
-  function cargarJSON() {
-    var datosJSON = JSON.parse(JSON.stringify("../pistas.json"));
-  }
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-=======
-  fetch('../pistas.json').then(ajaxOK);
+  fetch("../pistas.json").then(ajaxOK);
   function ajaxOK(response){
     response.json().then(muestraTexto);
   }
@@ -119,14 +111,13 @@
       tabla += "</td><td>"
       tabla += jsonObj.estado;
       tabla += "</td></tr>"
-      document.getElementById("remontes").innerHTML=tabla;
+      document.getElementById("pistas").innerHTML=tabla;
     }
 
   }
   var xhr=new XMLHttpRequest();
   xhr.onreadystatechange=function(){
     if(this.readyState==4 && this.status==200){
->>>>>>> 4fd53469fae708bc790a1947c67c5dcceb5c35ad
       cargarXML(this);
     }
   }
@@ -154,12 +145,8 @@
       tabla += rem[i].getElementsByTagName("estado")[0].textContent;
       tabla += "</td></tr>"
     }
-<<<<<<< HEAD
-    document.getElementById("remontes").innerHTML = tabla;
-=======
     document.getElementById("remontes").innerHTML=tabla;
     colorEstado();
->>>>>>> 4fd53469fae708bc790a1947c67c5dcceb5c35ad
   };
 
   function colorEstado(){

@@ -109,6 +109,8 @@
 
 <!-- para actualizar la fecha de los datos de la estacion -->
 <script>
+
+
   const meses = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
   const dias = ["DOMINGO", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO"];
   const hoy = new Date();
@@ -150,8 +152,8 @@
       }
       km = km / 1000;
       document.getElementById("pistasAbiertas").innerHTML = "PISTAS ABIERTAS: " + abiertas + "/13";
-      km=String(km);
-      km=km.replace(".", ",");
+      km = String(km);
+      km = km.replace(".", ",");
       document.getElementById("kilometros").innerHTML = "KILÓMETROS ESQUIABLES: " + km + " KM";
       //metemos el numero de pistas por niveles
       document.getElementsByClassName("contenido")[0].innerHTML = verdes + "/3";

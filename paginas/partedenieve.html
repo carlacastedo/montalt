@@ -55,9 +55,9 @@
     <div class="info">
       <ul>
         <li><b id="fecha"></b></li>
-        <li>PISTAS ABIERTAS: 10/13</li>
-        <li>REMONTES ABIERTOS: 5/6</li>
-        <li>KILÓMETROS ESQUIABLES: 7,04 KM</li>
+        <li id="pistasAbiertas">PISTAS ABIERTAS: 10/13</li>
+        <li id="remontesAbiertos"></li>
+        <li id="kilometros"></li>
         <li>CALIDAD DE LA NIEVE: POLVO/PRIMAVERA</li>
         <li>ESPESOR MÁXIMO: 220 CM</li>
         <li>ESPESOR MÍNIMO: 75 CM</li>
@@ -75,16 +75,16 @@
     <!--Establecemos el título e introducimos circulos de colores-->
     <div class="circulos">
       <div class="verde">
-        <p class="contenido">3/3</p>
+        <p class="contenido"></p>
       </div>
       <div class="azul">
-        <p class="contenido">3/4</p>
+        <p class="contenido"></p>
       </div>
       <div class="rojo">
-        <p class="contenido">3/4</p>
+        <p class="contenido"></p>
       </div>
       <div class="negro">
-        <p class="contenido">1/2</p>
+        <p class="contenido"></p>
       </div>
     </div>
   </section>
@@ -113,7 +113,77 @@
   const dias = ["DOMINGO", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO"];
   const hoy = new Date();
   // insertamos la fecha en el elemento de la lista fecha que no contiene nada
-  document.getElementById("fecha").innerHTML = "DATOS DEL " +  dias[hoy.getDay()] + " " + hoy.getDate() + " DE " + meses[hoy.getMonth()] + " DE " + hoy.getFullYear();
+  document.getElementById("fecha").innerHTML = "DATOS DEL " + dias[hoy.getDay()] + " " + hoy.getDate() + " DE " + meses[hoy.getMonth()] + " DE " + hoy.getFullYear();
   //ponemos el color en oscuro
   document.getElementById("fecha").style.color = "#1F1F26";
+
+  //actualizamos la informacion de la estacion con el fichero de json
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var jsonObj = JSON.parse(this.responseText);
+      var abiertas = 0;
+      var km = 0;
+      var verdes = 0,
+        azules = 0,
+        rojas = 0,
+        negras = 0;
+      for (x in jsonObj.pistas) {
+        if (jsonObj.pistas[x].estado == "Abierta") {
+          abiertas++;
+          km += parseInt(jsonObj.pistas[x].longitud);
+          switch (jsonObj.pistas[x].dificultad) {
+            case "Fácil":
+              verdes++;
+              break;
+            case "Intermedia":
+              azules++;
+              break;
+            case "Difícil":
+              rojas++;
+              break;
+            case "Muy difícil":
+              negras++;
+              break;
+          }
+        }
+      }
+      km = km / 1000;
+      document.getElementById("pistasAbiertas").innerHTML = "PISTAS ABIERTAS: " + abiertas + "/13";
+      km=String(km);
+      km=km.replace(".", ",");
+      document.getElementById("kilometros").innerHTML = "KILÓMETROS ESQUIABLES: " + km + " KM";
+      //metemos el numero de pistas por niveles
+      document.getElementsByClassName("contenido")[0].innerHTML = verdes + "/3";
+      document.getElementsByClassName("contenido")[1].innerHTML = azules + "/4";
+      document.getElementsByClassName("contenido")[2].innerHTML = rojas + "/4";
+      document.getElementsByClassName("contenido")[3].innerHTML = negras + "/2";
+    }
+  }
+
+  xhttp.open("GET", "../pistas.json", true);
+  xhttp.send();
+
+  //para cargar los remontes
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      contarRemontes(this);
+    }
+  }
+  xhr.open("GET", "../remontes.xml", true);
+  xhr.send();
+  //introduce en las estadisticas el numero de remontes abiertos
+  function contarRemontes(xml) {
+    var docXML = xml.responseXML;
+    var rem = docXML.getElementsByTagName("remonte");
+    let abiertos = 0;
+    //contamos el numero de remontes abiertos
+    for (var i = 0; i < rem.length; i++) {
+      if (rem[i].getElementsByTagName("estado")[0].textContent == "Abierto" || rem[i].getElementsByTagName("estado")[0].textContent == "Abierta") {
+        abiertos++;
+      }
+    }
+    document.getElementById("remontesAbiertos").innerHTML = "REMONTES ABIERTOS: " + abiertos + "/6";
+  };
 </script>
